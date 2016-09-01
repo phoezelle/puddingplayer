@@ -41,6 +41,8 @@ public:
   void initGPIO();
   void getAnalogBattery();
   
+  bool laststate;
+  
   
   //RF24
   void initRF24();
