@@ -78,8 +78,8 @@ void ofApp::setup(){
     log("Error on wiringPi setup\n",WARNING);
   }
   else {
-    pinMode(8,INPUT);
-    pullUpDnControl(8,PUD_DOWN);
+    pinMode(7,INPUT);
+    pullUpDnControl(7,PUD_DOWN);
   }
 
   
@@ -298,7 +298,7 @@ void ofApp::restartScene(){
 void ofApp::update(){
   fingerMovie.update();
   
-  if(digitalRead(8)!=0){
+  if(digitalRead(7)!=0){
     log("push on",USR);
   } else {
     log("push off",USR);
