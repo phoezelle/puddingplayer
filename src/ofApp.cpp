@@ -69,18 +69,14 @@ void ofApp::setup(){
 	ofSetVerticalSync(true);
   
   definePlateform();
-  if (pi) usbstickMount();
+  if (pi) {
+    usbstickMount();
+    initGPIO();
+  }
   getPref();
   setcurrentCharacter(0);
   checkNetwork();
-  
-  if(wiringPiSetup() == -1){
-    log("Error on wiringPi setup\n",WARNING);
-  }
-  else {
-    pinMode(7,INPUT);
-    pullUpDnControl(7,PUD_DOWN);
-  }
+
 
   
   
@@ -211,6 +207,15 @@ void ofApp::checkNetwork(){
 
 
 void ofApp::initGPIO(){
+  
+  if(wiringPiSetup() == -1){
+    log("Error on wiringPi setup\n",WARNING);
+  }
+  else {
+    pinMode(7,INPUT);
+    pullUpDnControl(7,PUD_DOWN);
+  }
+  laststate=digitalRead(7);
   
 }
 
