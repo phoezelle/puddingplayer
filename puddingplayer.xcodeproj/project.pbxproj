@@ -1,637 +1,741 @@
-<?xml version="1.0"?>
-<plist version="1.0">
-	<dict>
-		<key>archiveVersion</key>
-		<string>1</string>
-		<key>classes</key>
-		<dict />
-		<key>objectVersion</key>
-		<string>46</string>
-		<key>objects</key>
-		<dict>
-			<key>BB4B014C10F69532006C3DED</key>
-			<dict>
-				<key>children</key>
-				<array />
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>addons</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>6948EE371B920CB800B5AC1A</key>
-			<dict>
-				<key>children</key>
-				<array />
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>local_addons</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>E4328143138ABC890047C5CB</key>
-			<dict>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>wrapper.pb-project</string>
-				<key>name</key>
-				<string>openFrameworksLib.xcodeproj</string>
-				<key>path</key>
-				<string>../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4328144138ABC890047C5CB</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>E4328148138ABC890047C5CB</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>Products</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>E4328147138ABC890047C5CB</key>
-			<dict>
-				<key>containerPortal</key>
-				<string>E4328143138ABC890047C5CB</string>
-				<key>isa</key>
-				<string>PBXContainerItemProxy</string>
-				<key>proxyType</key>
-				<string>2</string>
-				<key>remoteGlobalIDString</key>
-				<string>E4B27C1510CBEB8E00536013</string>
-				<key>remoteInfo</key>
-				<string>openFrameworks</string>
-			</dict>
-			<key>E4328148138ABC890047C5CB</key>
-			<dict>
-				<key>fileType</key>
-				<string>archive.ar</string>
-				<key>isa</key>
-				<string>PBXReferenceProxy</string>
-				<key>path</key>
-				<string>openFrameworksDebug.a</string>
-				<key>remoteRef</key>
-				<string>E4328147138ABC890047C5CB</string>
-				<key>sourceTree</key>
-				<string>BUILT_PRODUCTS_DIR</string>
-			</dict>
-			<key>E4328149138ABC9F0047C5CB</key>
-			<dict>
-				<key>fileRef</key>
-				<string>E4328148138ABC890047C5CB</string>
-				<key>isa</key>
-				<string>PBXBuildFile</string>
-			</dict>
-			<key>E4B69B4A0A3A1720003C02F2</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>E4B6FCAD0C3E899E008CF71C</string>
-					<string>E4EB6923138AFD0F00A09F29</string>
-					<string>E4B69E1C0A3A1BDC003C02F2</string>
-					<string>E4EEC9E9138DF44700A80321</string>
-					<string>BB4B014C10F69532006C3DED</string>
-					<string>6948EE371B920CB800B5AC1A</string>
-					<string>E4B69B5B0A3A1756003C02F2</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>E4B69B4C0A3A1720003C02F2</key>
-			<dict>
-				<key>attributes</key>
-				<dict>
-					<key>LastUpgradeCheck</key>
-					<string>0600</string>
-				</dict>
-				<key>buildConfigurationList</key>
-				<string>E4B69B4D0A3A1720003C02F2</string>
-				<key>compatibilityVersion</key>
-				<string>Xcode 3.2</string>
-				<key>developmentRegion</key>
-				<string>English</string>
-				<key>hasScannedForEncodings</key>
-				<string>0</string>
-				<key>isa</key>
-				<string>PBXProject</string>
-				<key>knownRegions</key>
-				<array>
-					<string>English</string>
-					<string>Japanese</string>
-					<string>French</string>
-					<string>German</string>
-				</array>
-				<key>mainGroup</key>
-				<string>E4B69B4A0A3A1720003C02F2</string>
-				<key>productRefGroup</key>
-				<string>E4B69B4A0A3A1720003C02F2</string>
-				<key>projectDirPath</key>
-				<string />
-				<key>projectReferences</key>
-				<array>
-					<dict>
-						<key>ProductGroup</key>
-						<string>E4328144138ABC890047C5CB</string>
-						<key>ProjectRef</key>
-						<string>E4328143138ABC890047C5CB</string>
-					</dict>
-				</array>
-				<key>projectRoot</key>
-				<string />
-				<key>targets</key>
-				<array>
-					<string>E4B69B5A0A3A1756003C02F2</string>
-				</array>
-			</dict>
-			<key>E4B69B4D0A3A1720003C02F2</key>
-			<dict>
-				<key>buildConfigurations</key>
-				<array>
-					<string>E4B69B4E0A3A1720003C02F2</string>
-					<string>E4B69B4F0A3A1720003C02F2</string>
-				</array>
-				<key>defaultConfigurationIsVisible</key>
-				<string>0</string>
-				<key>defaultConfigurationName</key>
-				<string>Release</string>
-				<key>isa</key>
-				<string>XCConfigurationList</string>
-			</dict>
-			<key>E4B69B4E0A3A1720003C02F2</key>
-			<dict>
-				<key>baseConfigurationReference</key>
-				<string>E4EB6923138AFD0F00A09F29</string>
-				<key>buildSettings</key>
-				<dict>
-					<key>CONFIGURATION_BUILD_DIR</key>
-					<string>$(SRCROOT)/bin/</string>
-					<key>COPY_PHASE_STRIP</key>
-					<string>NO</string>
-					<key>DEAD_CODE_STRIPPING</key>
-					<string>YES</string>
-					<key>GCC_AUTO_VECTORIZATION</key>
-					<string>YES</string>
-					<key>GCC_ENABLE_SSE3_EXTENSIONS</key>
-					<string>YES</string>
-					<key>GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS</key>
-					<string>YES</string>
-					<key>GCC_INLINES_ARE_PRIVATE_EXTERN</key>
-					<string>NO</string>
-					<key>GCC_OPTIMIZATION_LEVEL</key>
-					<string>0</string>
-					<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-					<string>NO</string>
-					<key>GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS</key>
-					<string>YES</string>
-					<key>GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO</key>
-					<string>NO</string>
-					<key>GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNUSED_VALUE</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNUSED_VARIABLE</key>
-					<string>NO</string>
-					<key>MACOSX_DEPLOYMENT_TARGET</key>
-					<string>10.8</string>
-					<key>ONLY_ACTIVE_ARCH</key>
-					<string>YES</string>
-					<key>OTHER_CPLUSPLUSFLAGS</key>
-					<array>
-						<string>-D__MACOSX_CORE__</string>
-						<string>-mtune=native</string>
-					</array>
-					<key>SDKROOT</key>
-					<string>macosx</string>
-				</dict>
-				<key>isa</key>
-				<string>XCBuildConfiguration</string>
-				<key>name</key>
-				<string>Debug</string>
-			</dict>
-			<key>E4B69B4F0A3A1720003C02F2</key>
-			<dict>
-				<key>baseConfigurationReference</key>
-				<string>E4EB6923138AFD0F00A09F29</string>
-				<key>buildSettings</key>
-				<dict>
-					<key>CONFIGURATION_BUILD_DIR</key>
-					<string>$(SRCROOT)/bin/</string>
-					<key>COPY_PHASE_STRIP</key>
-					<string>YES</string>
-					<key>DEAD_CODE_STRIPPING</key>
-					<string>YES</string>
-					<key>GCC_AUTO_VECTORIZATION</key>
-					<string>YES</string>
-					<key>GCC_ENABLE_SSE3_EXTENSIONS</key>
-					<string>YES</string>
-					<key>GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS</key>
-					<string>YES</string>
-					<key>GCC_INLINES_ARE_PRIVATE_EXTERN</key>
-					<string>NO</string>
-					<key>GCC_OPTIMIZATION_LEVEL</key>
-					<string>3</string>
-					<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-					<string>NO</string>
-					<key>GCC_UNROLL_LOOPS</key>
-					<string>YES</string>
-					<key>GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS</key>
-					<string>YES</string>
-					<key>GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO</key>
-					<string>NO</string>
-					<key>GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNUSED_VALUE</key>
-					<string>NO</string>
-					<key>GCC_WARN_UNUSED_VARIABLE</key>
-					<string>NO</string>
-					<key>MACOSX_DEPLOYMENT_TARGET</key>
-					<string>10.8</string>
-					<key>OTHER_CPLUSPLUSFLAGS</key>
-					<array>
-						<string>-D__MACOSX_CORE__</string>
-						<string>-mtune=native</string>
-					</array>
-					<key>SDKROOT</key>
-					<string>macosx</string>
-				</dict>
-				<key>isa</key>
-				<string>XCBuildConfiguration</string>
-				<key>name</key>
-				<string>Release</string>
-			</dict>
-			<key>E4B69B580A3A1756003C02F2</key>
-			<dict>
-				<key>buildActionMask</key>
-				<string>2147483647</string>
-				<key>files</key>
-				<array>
-					<string>E4B69E200A3A1BDC003C02F2</string>
-					<string>E4B69E210A3A1BDC003C02F2</string>
-				</array>
-				<key>isa</key>
-				<string>PBXSourcesBuildPhase</string>
-				<key>runOnlyForDeploymentPostprocessing</key>
-				<string>0</string>
-			</dict>
-			<key>E4B69B590A3A1756003C02F2</key>
-			<dict>
-				<key>buildActionMask</key>
-				<string>2147483647</string>
-				<key>files</key>
-				<array>
-					<string>E4328149138ABC9F0047C5CB</string>
-				</array>
-				<key>isa</key>
-				<string>PBXFrameworksBuildPhase</string>
-				<key>runOnlyForDeploymentPostprocessing</key>
-				<string>0</string>
-			</dict>
-			<key>E4B69B5A0A3A1756003C02F2</key>
-			<dict>
-				<key>buildConfigurationList</key>
-				<string>E4B69B5F0A3A1757003C02F2</string>
-				<key>buildPhases</key>
-				<array>
-					<string>E4B69B580A3A1756003C02F2</string>
-					<string>E4B69B590A3A1756003C02F2</string>
-					<string>E4B6FFFD0C3F9AB9008CF71C</string>
-					<string>E4C2427710CC5ABF004149E2</string>
-				</array>
-				<key>buildRules</key>
-				<array />
-				<key>dependencies</key>
-				<array>
-					<string>E4EEB9AC138B136A00A80321</string>
-				</array>
-				<key>isa</key>
-				<string>PBXNativeTarget</string>
-				<key>name</key>
-				<string>puddingplayer</string>
-				<key>productName</key>
-				<string>myOFApp</string>
-				<key>productReference</key>
-				<string>E4B69B5B0A3A1756003C02F2</string>
-				<key>productType</key>
-				<string>com.apple.product-type.application</string>
-			</dict>
-			<key>E4B69B5B0A3A1756003C02F2</key>
-			<dict>
-				<key>explicitFileType</key>
-				<string>wrapper.application</string>
-				<key>includeInIndex</key>
-				<string>0</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>path</key>
-				<string>puddingplayerDebug.app</string>
-				<key>sourceTree</key>
-				<string>BUILT_PRODUCTS_DIR</string>
-			</dict>
-			<key>E4B69B5F0A3A1757003C02F2</key>
-			<dict>
-				<key>buildConfigurations</key>
-				<array>
-					<string>E4B69B600A3A1757003C02F2</string>
-					<string>E4B69B610A3A1757003C02F2</string>
-				</array>
-				<key>defaultConfigurationIsVisible</key>
-				<string>0</string>
-				<key>defaultConfigurationName</key>
-				<string>Release</string>
-				<key>isa</key>
-				<string>XCConfigurationList</string>
-			</dict>
-			<key>E4B69B600A3A1757003C02F2</key>
-			<dict>
-				<key>baseConfigurationReference</key>
-				<string>E4EB6923138AFD0F00A09F29</string>
-				<key>buildSettings</key>
-				<dict>
-					<key>COMBINE_HIDPI_IMAGES</key>
-					<string>YES</string>
-					<key>COPY_PHASE_STRIP</key>
-					<string>NO</string>
-					<key>FRAMEWORK_SEARCH_PATHS</key>
-					<array>
-						<string>$(inherited)</string>
-						<string>$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)</string>
-					</array>
-					<key>FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1</key>
-					<string>"$(SRCROOT)/../../../libs/glut/lib/osx"</string>
-					<key>GCC_DYNAMIC_NO_PIC</key>
-					<string>NO</string>
-					<key>GCC_GENERATE_DEBUGGING_SYMBOLS</key>
-					<string>YES</string>
-					<key>GCC_MODEL_TUNING</key>
-					<string>NONE</string>
-					<key>ICON</key>
-					<string>$(ICON_NAME_DEBUG)</string>
-					<key>ICON_FILE</key>
-					<string>$(ICON_FILE_PATH)$(ICON)</string>
-					<key>INFOPLIST_FILE</key>
-					<string>openFrameworks-Info.plist</string>
-					<key>INSTALL_PATH</key>
-					<string>$(HOME)/Applications</string>
-					<key>LIBRARY_SEARCH_PATHS</key>
-					<string>$(inherited)</string>
-					<key>PRODUCT_NAME</key>
-					<string>$(TARGET_NAME)Debug</string>
-					<key>WRAPPER_EXTENSION</key>
-					<string>app</string>
-				</dict>
-				<key>isa</key>
-				<string>XCBuildConfiguration</string>
-				<key>name</key>
-				<string>Debug</string>
-			</dict>
-			<key>E4B69B610A3A1757003C02F2</key>
-			<dict>
-				<key>baseConfigurationReference</key>
-				<string>E4EB6923138AFD0F00A09F29</string>
-				<key>buildSettings</key>
-				<dict>
-					<key>COMBINE_HIDPI_IMAGES</key>
-					<string>YES</string>
-					<key>COPY_PHASE_STRIP</key>
-					<string>YES</string>
-					<key>FRAMEWORK_SEARCH_PATHS</key>
-					<array>
-						<string>$(inherited)</string>
-						<string>$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)</string>
-					</array>
-					<key>FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1</key>
-					<string>"$(SRCROOT)/../../../libs/glut/lib/osx"</string>
-					<key>GCC_GENERATE_DEBUGGING_SYMBOLS</key>
-					<string>YES</string>
-					<key>GCC_MODEL_TUNING</key>
-					<string>NONE</string>
-					<key>ICON</key>
-					<string>$(ICON_NAME_RELEASE)</string>
-					<key>ICON_FILE</key>
-					<string>$(ICON_FILE_PATH)$(ICON)</string>
-					<key>INFOPLIST_FILE</key>
-					<string>openFrameworks-Info.plist</string>
-					<key>INSTALL_PATH</key>
-					<string>$(HOME)/Applications</string>
-					<key>LIBRARY_SEARCH_PATHS</key>
-					<string>$(inherited)</string>
-					<key>PRODUCT_NAME</key>
-					<string>$(TARGET_NAME)</string>
-					<key>WRAPPER_EXTENSION</key>
-					<string>app</string>
-					<key>baseConfigurationReference</key>
-					<string>E4EB6923138AFD0F00A09F29</string>
-				</dict>
-				<key>isa</key>
-				<string>XCBuildConfiguration</string>
-				<key>name</key>
-				<string>Release</string>
-			</dict>
-			<key>E4B69E1C0A3A1BDC003C02F2</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>E4B69E1D0A3A1BDC003C02F2</string>
-					<string>E4B69E1E0A3A1BDC003C02F2</string>
-					<string>E4B69E1F0A3A1BDC003C02F2</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>path</key>
-				<string>src</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4B69E1D0A3A1BDC003C02F2</key>
-			<dict>
-				<key>fileEncoding</key>
-				<string>30</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>sourcecode.cpp.cpp</string>
-				<key>name</key>
-				<string>main.cpp</string>
-				<key>path</key>
-				<string>src/main.cpp</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4B69E1E0A3A1BDC003C02F2</key>
-			<dict>
-				<key>explicitFileType</key>
-				<string>sourcecode.cpp.cpp</string>
-				<key>fileEncoding</key>
-				<string>30</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>name</key>
-				<string>ofApp.cpp</string>
-				<key>path</key>
-				<string>src/ofApp.cpp</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4B69E1F0A3A1BDC003C02F2</key>
-			<dict>
-				<key>fileEncoding</key>
-				<string>30</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>sourcecode.c.h</string>
-				<key>name</key>
-				<string>ofApp.h</string>
-				<key>path</key>
-				<string>src/ofApp.h</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4B69E200A3A1BDC003C02F2</key>
-			<dict>
-				<key>fileRef</key>
-				<string>E4B69E1D0A3A1BDC003C02F2</string>
-				<key>isa</key>
-				<string>PBXBuildFile</string>
-			</dict>
-			<key>E4B69E210A3A1BDC003C02F2</key>
-			<dict>
-				<key>fileRef</key>
-				<string>E4B69E1E0A3A1BDC003C02F2</string>
-				<key>isa</key>
-				<string>PBXBuildFile</string>
-			</dict>
-			<key>E4B6FCAD0C3E899E008CF71C</key>
-			<dict>
-				<key>fileEncoding</key>
-				<string>30</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>text.plist.xml</string>
-				<key>path</key>
-				<string>openFrameworks-Info.plist</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>E4B6FFFD0C3F9AB9008CF71C</key>
-			<dict>
-				<key>buildActionMask</key>
-				<string>2147483647</string>
-				<key>files</key>
-				<array />
-				<key>inputPaths</key>
-				<array />
-				<key>isa</key>
-				<string>PBXShellScriptBuildPhase</string>
-				<key>outputPaths</key>
-				<array />
-				<key>runOnlyForDeploymentPostprocessing</key>
-				<string>0</string>
-				<key>shellPath</key>
-				<string>/bin/sh</string>
-				<key>shellScript</key>
-				<string>rsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME";
-mkdir -p "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/"
-rsync -aved "$ICON_FILE" "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/"
-rsync -aved ../../../libs/glut/lib/osx/GLUT.framework "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/"
-</string>
-			</dict>
-			<key>E4C2427710CC5ABF004149E2</key>
-			<dict>
-				<key>buildActionMask</key>
-				<string>2147483647</string>
-				<key>dstPath</key>
-				<string />
-				<key>dstSubfolderSpec</key>
-				<string>10</string>
-				<key>files</key>
-				<array />
-				<key>isa</key>
-				<string>PBXCopyFilesBuildPhase</string>
-				<key>runOnlyForDeploymentPostprocessing</key>
-				<string>0</string>
-			</dict>
-			<key>E4EB691F138AFCF100A09F29</key>
-			<dict>
-				<key>fileEncoding</key>
-				<string>4</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>text.xcconfig</string>
-				<key>name</key>
-				<string>CoreOF.xcconfig</string>
-				<key>path</key>
-				<string>../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
-			<key>E4EB6923138AFD0F00A09F29</key>
-			<dict>
-				<key>fileEncoding</key>
-				<string>4</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>lastKnownFileType</key>
-				<string>text.xcconfig</string>
-				<key>path</key>
-				<string>Project.xcconfig</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-			<key>E4EEB9AB138B136A00A80321</key>
-			<dict>
-				<key>containerPortal</key>
-				<string>E4328143138ABC890047C5CB</string>
-				<key>isa</key>
-				<string>PBXContainerItemProxy</string>
-				<key>proxyType</key>
-				<string>1</string>
-				<key>remoteGlobalIDString</key>
-				<string>E4B27C1410CBEB8E00536013</string>
-				<key>remoteInfo</key>
-				<string>openFrameworks</string>
-			</dict>
-			<key>E4EEB9AC138B136A00A80321</key>
-			<dict>
-				<key>isa</key>
-				<string>PBXTargetDependency</string>
-				<key>name</key>
-				<string>openFrameworks</string>
-				<key>targetProxy</key>
-				<string>E4EEB9AB138B136A00A80321</string>
-			</dict>
-			<key>E4EEC9E9138DF44700A80321</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>E4EB691F138AFCF100A09F29</string>
-					<string>E4328143138ABC890047C5CB</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>openFrameworks</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
-		</dict>
-		<key>rootObject</key>
-		<string>E4B69B4C0A3A1720003C02F2</string>
-	</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A094CC831D78B5BC00375F08 /* build */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build; sourceTree = "<group>"; };
+		A094CC841D78B5BC00375F08 /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING.LESSER; sourceTree = "<group>"; };
+		A094CC861D78B5BC00375F08 /* ds1302.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ds1302.c; sourceTree = "<group>"; };
+		A094CC871D78B5BC00375F08 /* ds1302.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ds1302.h; sourceTree = "<group>"; };
+		A094CC881D78B5BC00375F08 /* font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = font.h; sourceTree = "<group>"; };
+		A094CC891D78B5BC00375F08 /* gertboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gertboard.c; sourceTree = "<group>"; };
+		A094CC8A1D78B5BC00375F08 /* gertboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gertboard.h; sourceTree = "<group>"; };
+		A094CC8B1D78B5BC00375F08 /* lcd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcd.c; sourceTree = "<group>"; };
+		A094CC8C1D78B5BC00375F08 /* lcd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcd.h; sourceTree = "<group>"; };
+		A094CC8D1D78B5BC00375F08 /* lcd128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcd128x64.c; sourceTree = "<group>"; };
+		A094CC8E1D78B5BC00375F08 /* lcd128x64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcd128x64.h; sourceTree = "<group>"; };
+		A094CC8F1D78B5BC00375F08 /* libwiringPiDev.so.2.0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = libwiringPiDev.so.2.0; sourceTree = "<group>"; };
+		A094CC901D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CC911D78B5BC00375F08 /* maxdetect.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = maxdetect.c; sourceTree = "<group>"; };
+		A094CC921D78B5BC00375F08 /* maxdetect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = maxdetect.h; sourceTree = "<group>"; };
+		A094CC931D78B5BC00375F08 /* piFace.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piFace.c; sourceTree = "<group>"; };
+		A094CC941D78B5BC00375F08 /* piFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = piFace.h; sourceTree = "<group>"; };
+		A094CC951D78B5BC00375F08 /* piFaceOld.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piFaceOld.c; sourceTree = "<group>"; };
+		A094CC961D78B5BC00375F08 /* piGlow.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piGlow.c; sourceTree = "<group>"; };
+		A094CC971D78B5BC00375F08 /* piGlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = piGlow.h; sourceTree = "<group>"; };
+		A094CC981D78B5BC00375F08 /* piNes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piNes.c; sourceTree = "<group>"; };
+		A094CC991D78B5BC00375F08 /* piNes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = piNes.h; sourceTree = "<group>"; };
+		A094CC9B1D78B5BC00375F08 /* blink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink.c; sourceTree = "<group>"; };
+		A094CC9C1D78B5BC00375F08 /* blink.rtb */ = {isa = PBXFileReference; lastKnownFileType = text; path = blink.rtb; sourceTree = "<group>"; };
+		A094CC9D1D78B5BC00375F08 /* blink.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = blink.sh; sourceTree = "<group>"; };
+		A094CC9E1D78B5BC00375F08 /* blink12.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink12.c; sourceTree = "<group>"; };
+		A094CC9F1D78B5BC00375F08 /* blink12drcs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink12drcs.c; sourceTree = "<group>"; };
+		A094CCA01D78B5BC00375F08 /* blink6drcs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink6drcs.c; sourceTree = "<group>"; };
+		A094CCA11D78B5BC00375F08 /* blink8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink8.c; sourceTree = "<group>"; };
+		A094CCA21D78B5BC00375F08 /* clock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = clock.c; sourceTree = "<group>"; };
+		A094CCA31D78B5BC00375F08 /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING.LESSER; sourceTree = "<group>"; };
+		A094CCA41D78B5BC00375F08 /* delayTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delayTest.c; sourceTree = "<group>"; };
+		A094CCA51D78B5BC00375F08 /* ds1302.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ds1302.c; sourceTree = "<group>"; };
+		A094CCA71D78B5BC00375F08 /* 7segments.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7segments.c; sourceTree = "<group>"; };
+		A094CCA81D78B5BC00375F08 /* buttons.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = buttons.c; sourceTree = "<group>"; };
+		A094CCA91D78B5BC00375F08 /* gertboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gertboard.c; sourceTree = "<group>"; };
+		A094CCAA1D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCAB1D78B5BC00375F08 /* record.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = record.c; sourceTree = "<group>"; };
+		A094CCAC1D78B5BC00375F08 /* temperature.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = temperature.c; sourceTree = "<group>"; };
+		A094CCAD1D78B5BC00375F08 /* voltmeter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = voltmeter.c; sourceTree = "<group>"; };
+		A094CCAE1D78B5BC00375F08 /* vumeter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vumeter.c; sourceTree = "<group>"; };
+		A094CCAF1D78B5BC00375F08 /* header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
+		A094CCB01D78B5BC00375F08 /* isr-osc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "isr-osc.c"; sourceTree = "<group>"; };
+		A094CCB11D78B5BC00375F08 /* isr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = isr.c; sourceTree = "<group>"; };
+		A094CCB21D78B5BC00375F08 /* lcd-adafruit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "lcd-adafruit.c"; sourceTree = "<group>"; };
+		A094CCB31D78B5BC00375F08 /* lcd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcd.c; sourceTree = "<group>"; };
+		A094CCB41D78B5BC00375F08 /* lowPower.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lowPower.c; sourceTree = "<group>"; };
+		A094CCB51D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCB61D78B5BC00375F08 /* nes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = nes.c; sourceTree = "<group>"; };
+		A094CCB71D78B5BC00375F08 /* okLed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = okLed.c; sourceTree = "<group>"; };
+		A094CCB91D78B5BC00375F08 /* blink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink.c; sourceTree = "<group>"; };
+		A094CCBA1D78B5BC00375F08 /* buttons.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = buttons.c; sourceTree = "<group>"; };
+		A094CCBB1D78B5BC00375F08 /* ladder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ladder.c; sourceTree = "<group>"; };
+		A094CCBC1D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCBD1D78B5BC00375F08 /* metro.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = metro.c; sourceTree = "<group>"; };
+		A094CCBE1D78B5BC00375F08 /* motor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = motor.c; sourceTree = "<group>"; };
+		A094CCBF1D78B5BC00375F08 /* reaction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reaction.c; sourceTree = "<group>"; };
+		A094CCC11D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCC21D78B5BC00375F08 /* piglow.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piglow.c; sourceTree = "<group>"; };
+		A094CCC31D78B5BC00375F08 /* piGlow0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piGlow0.c; sourceTree = "<group>"; };
+		A094CCC41D78B5BC00375F08 /* piGlow1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piGlow1.c; sourceTree = "<group>"; };
+		A094CCC51D78B5BC00375F08 /* pwm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pwm.c; sourceTree = "<group>"; };
+		A094CCC71D78B5BC00375F08 /* binary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = binary.c; sourceTree = "<group>"; };
+		A094CCC81D78B5BC00375F08 /* blink-io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "blink-io.c"; sourceTree = "<group>"; };
+		A094CCC91D78B5BC00375F08 /* blink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blink.c; sourceTree = "<group>"; };
+		A094CCCA1D78B5BC00375F08 /* blink.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = blink.sh; sourceTree = "<group>"; };
+		A094CCCB1D78B5BC00375F08 /* bright.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bright.c; sourceTree = "<group>"; };
+		A094CCCC1D78B5BC00375F08 /* button.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = button.c; sourceTree = "<group>"; };
+		A094CCCD1D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCCE1D78B5BC00375F08 /* volts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = volts.c; sourceTree = "<group>"; };
+		A094CCCF1D78B5BC00375F08 /* README.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
+		A094CCD01D78B5BC00375F08 /* rht03.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rht03.c; sourceTree = "<group>"; };
+		A094CCD11D78B5BC00375F08 /* serialRead.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = serialRead.c; sourceTree = "<group>"; };
+		A094CCD21D78B5BC00375F08 /* serialTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = serialTest.c; sourceTree = "<group>"; };
+		A094CCD31D78B5BC00375F08 /* servo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = servo.c; sourceTree = "<group>"; };
+		A094CCD41D78B5BC00375F08 /* softPwm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = softPwm.c; sourceTree = "<group>"; };
+		A094CCD51D78B5BC00375F08 /* softTone.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = softTone.c; sourceTree = "<group>"; };
+		A094CCD61D78B5BC00375F08 /* speed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = speed.c; sourceTree = "<group>"; };
+		A094CCD71D78B5BC00375F08 /* spiSpeed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = spiSpeed.c; sourceTree = "<group>"; };
+		A094CCD81D78B5BC00375F08 /* wfi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wfi.c; sourceTree = "<group>"; };
+		A094CCDA1D78B5BC00375F08 /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING.LESSER; sourceTree = "<group>"; };
+		A094CCDB1D78B5BC00375F08 /* extensions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = extensions.c; sourceTree = "<group>"; };
+		A094CCDC1D78B5BC00375F08 /* extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = extensions.h; sourceTree = "<group>"; };
+		A094CCDD1D78B5BC00375F08 /* gpio */ = {isa = PBXFileReference; lastKnownFileType = file; path = gpio; sourceTree = "<group>"; };
+		A094CCDE1D78B5BC00375F08 /* gpio.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gpio.1; sourceTree = "<group>"; };
+		A094CCDF1D78B5BC00375F08 /* gpio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gpio.c; sourceTree = "<group>"; };
+		A094CCE01D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCE11D78B5BC00375F08 /* pins.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pins.c; sourceTree = "<group>"; };
+		A094CCE21D78B5BC00375F08 /* pintest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pintest; sourceTree = "<group>"; };
+		A094CCE31D78B5BC00375F08 /* readall.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readall.c; sourceTree = "<group>"; };
+		A094CCE41D78B5BC00375F08 /* test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
+		A094CCE51D78B5BC00375F08 /* INSTALL */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		A094CCE61D78B5BC00375F08 /* People */ = {isa = PBXFileReference; lastKnownFileType = text; path = People; sourceTree = "<group>"; };
+		A094CCE81D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCE91D78B5BC00375F08 /* pins.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pins.pdf; sourceTree = "<group>"; };
+		A094CCEA1D78B5BC00375F08 /* pins.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = pins.tex; sourceTree = "<group>"; };
+		A094CCEB1D78B5BC00375F08 /* README.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
+		A094CCED1D78B5BC00375F08 /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING.LESSER; sourceTree = "<group>"; };
+		A094CCEE1D78B5BC00375F08 /* drcSerial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = drcSerial.c; sourceTree = "<group>"; };
+		A094CCEF1D78B5BC00375F08 /* drcSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drcSerial.h; sourceTree = "<group>"; };
+		A094CCF01D78B5BC00375F08 /* libwiringPi.so.2.0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = libwiringPi.so.2.0; sourceTree = "<group>"; };
+		A094CCF11D78B5BC00375F08 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A094CCF21D78B5BC00375F08 /* max31855.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = max31855.c; sourceTree = "<group>"; };
+		A094CCF31D78B5BC00375F08 /* max31855.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = max31855.h; sourceTree = "<group>"; };
+		A094CCF41D78B5BC00375F08 /* max5322.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = max5322.c; sourceTree = "<group>"; };
+		A094CCF51D78B5BC00375F08 /* max5322.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = max5322.h; sourceTree = "<group>"; };
+		A094CCF61D78B5BC00375F08 /* mcp23008.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp23008.c; sourceTree = "<group>"; };
+		A094CCF71D78B5BC00375F08 /* mcp23008.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23008.h; sourceTree = "<group>"; };
+		A094CCF81D78B5BC00375F08 /* mcp23016.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp23016.c; sourceTree = "<group>"; };
+		A094CCF91D78B5BC00375F08 /* mcp23016.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23016.h; sourceTree = "<group>"; };
+		A094CCFA1D78B5BC00375F08 /* mcp23016reg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23016reg.h; sourceTree = "<group>"; };
+		A094CCFB1D78B5BC00375F08 /* mcp23017.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp23017.c; sourceTree = "<group>"; };
+		A094CCFC1D78B5BC00375F08 /* mcp23017.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23017.h; sourceTree = "<group>"; };
+		A094CCFD1D78B5BC00375F08 /* mcp23s08.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp23s08.c; sourceTree = "<group>"; };
+		A094CCFE1D78B5BC00375F08 /* mcp23s08.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23s08.h; sourceTree = "<group>"; };
+		A094CCFF1D78B5BC00375F08 /* mcp23s17.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp23s17.c; sourceTree = "<group>"; };
+		A094CD001D78B5BC00375F08 /* mcp23s17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23s17.h; sourceTree = "<group>"; };
+		A094CD011D78B5BC00375F08 /* mcp23x08.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23x08.h; sourceTree = "<group>"; };
+		A094CD021D78B5BC00375F08 /* mcp23x0817.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp23x0817.h; sourceTree = "<group>"; };
+		A094CD031D78B5BC00375F08 /* mcp3002.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp3002.c; sourceTree = "<group>"; };
+		A094CD041D78B5BC00375F08 /* mcp3002.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp3002.h; sourceTree = "<group>"; };
+		A094CD051D78B5BC00375F08 /* mcp3004.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp3004.c; sourceTree = "<group>"; };
+		A094CD061D78B5BC00375F08 /* mcp3004.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp3004.h; sourceTree = "<group>"; };
+		A094CD071D78B5BC00375F08 /* mcp3422.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp3422.c; sourceTree = "<group>"; };
+		A094CD081D78B5BC00375F08 /* mcp3422.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp3422.h; sourceTree = "<group>"; };
+		A094CD091D78B5BC00375F08 /* mcp4802.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mcp4802.c; sourceTree = "<group>"; };
+		A094CD0A1D78B5BC00375F08 /* mcp4802.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcp4802.h; sourceTree = "<group>"; };
+		A094CD0B1D78B5BC00375F08 /* pcf8574.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pcf8574.c; sourceTree = "<group>"; };
+		A094CD0C1D78B5BC00375F08 /* pcf8574.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pcf8574.h; sourceTree = "<group>"; };
+		A094CD0D1D78B5BC00375F08 /* pcf8591.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pcf8591.c; sourceTree = "<group>"; };
+		A094CD0E1D78B5BC00375F08 /* pcf8591.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pcf8591.h; sourceTree = "<group>"; };
+		A094CD0F1D78B5BC00375F08 /* piHiPri.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piHiPri.c; sourceTree = "<group>"; };
+		A094CD101D78B5BC00375F08 /* piThread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = piThread.c; sourceTree = "<group>"; };
+		A094CD111D78B5BC00375F08 /* sn3218.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sn3218.c; sourceTree = "<group>"; };
+		A094CD121D78B5BC00375F08 /* sn3218.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sn3218.h; sourceTree = "<group>"; };
+		A094CD131D78B5BC00375F08 /* softPwm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = softPwm.c; sourceTree = "<group>"; };
+		A094CD141D78B5BC00375F08 /* softPwm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softPwm.h; sourceTree = "<group>"; };
+		A094CD151D78B5BC00375F08 /* softServo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = softServo.c; sourceTree = "<group>"; };
+		A094CD161D78B5BD00375F08 /* softServo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softServo.h; sourceTree = "<group>"; };
+		A094CD171D78B5BD00375F08 /* softTone.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = softTone.c; sourceTree = "<group>"; };
+		A094CD181D78B5BD00375F08 /* softTone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softTone.h; sourceTree = "<group>"; };
+		A094CD191D78B5BD00375F08 /* sr595.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sr595.c; sourceTree = "<group>"; };
+		A094CD1A1D78B5BD00375F08 /* sr595.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sr595.h; sourceTree = "<group>"; };
+		A094CD1B1D78B5BD00375F08 /* wiringPi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringPi.c; sourceTree = "<group>"; };
+		A094CD1C1D78B5BD00375F08 /* wiringPi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPi.h; sourceTree = "<group>"; };
+		A094CD1D1D78B5BD00375F08 /* wiringPiI2C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringPiI2C.c; sourceTree = "<group>"; };
+		A094CD1E1D78B5BD00375F08 /* wiringPiI2C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPiI2C.h; sourceTree = "<group>"; };
+		A094CD1F1D78B5BD00375F08 /* wiringPiSPI.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringPiSPI.c; sourceTree = "<group>"; };
+		A094CD201D78B5BD00375F08 /* wiringPiSPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPiSPI.h; sourceTree = "<group>"; };
+		A094CD211D78B5BD00375F08 /* wiringSerial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringSerial.c; sourceTree = "<group>"; };
+		A094CD221D78B5BD00375F08 /* wiringSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringSerial.h; sourceTree = "<group>"; };
+		A094CD231D78B5BD00375F08 /* wiringShift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringShift.c; sourceTree = "<group>"; };
+		A094CD241D78B5BD00375F08 /* wiringShift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringShift.h; sourceTree = "<group>"; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* puddingplayerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puddingplayerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+				A094CC821D78B5BC00375F08 /* wiringPi */,
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		A094CC821D78B5BC00375F08 /* wiringPi */ = {
+			isa = PBXGroup;
+			children = (
+				A094CC831D78B5BC00375F08 /* build */,
+				A094CC841D78B5BC00375F08 /* COPYING.LESSER */,
+				A094CC851D78B5BC00375F08 /* devLib */,
+				A094CC9A1D78B5BC00375F08 /* examples */,
+				A094CCD91D78B5BC00375F08 /* gpio */,
+				A094CCE51D78B5BC00375F08 /* INSTALL */,
+				A094CCE61D78B5BC00375F08 /* People */,
+				A094CCE71D78B5BC00375F08 /* pins */,
+				A094CCEB1D78B5BC00375F08 /* README.TXT */,
+				A094CCEC1D78B5BC00375F08 /* wiringPi */,
+			);
+			name = wiringPi;
+			path = "../../../../../../../Volumes/myDoc/documents/régies/komplex/dnc/carte/git/RPi-ShowPlayer/player/Libs/wiringPi";
+			sourceTree = "<group>";
+		};
+		A094CC851D78B5BC00375F08 /* devLib */ = {
+			isa = PBXGroup;
+			children = (
+				A094CC861D78B5BC00375F08 /* ds1302.c */,
+				A094CC871D78B5BC00375F08 /* ds1302.h */,
+				A094CC881D78B5BC00375F08 /* font.h */,
+				A094CC891D78B5BC00375F08 /* gertboard.c */,
+				A094CC8A1D78B5BC00375F08 /* gertboard.h */,
+				A094CC8B1D78B5BC00375F08 /* lcd.c */,
+				A094CC8C1D78B5BC00375F08 /* lcd.h */,
+				A094CC8D1D78B5BC00375F08 /* lcd128x64.c */,
+				A094CC8E1D78B5BC00375F08 /* lcd128x64.h */,
+				A094CC8F1D78B5BC00375F08 /* libwiringPiDev.so.2.0 */,
+				A094CC901D78B5BC00375F08 /* Makefile */,
+				A094CC911D78B5BC00375F08 /* maxdetect.c */,
+				A094CC921D78B5BC00375F08 /* maxdetect.h */,
+				A094CC931D78B5BC00375F08 /* piFace.c */,
+				A094CC941D78B5BC00375F08 /* piFace.h */,
+				A094CC951D78B5BC00375F08 /* piFaceOld.c */,
+				A094CC961D78B5BC00375F08 /* piGlow.c */,
+				A094CC971D78B5BC00375F08 /* piGlow.h */,
+				A094CC981D78B5BC00375F08 /* piNes.c */,
+				A094CC991D78B5BC00375F08 /* piNes.h */,
+			);
+			path = devLib;
+			sourceTree = "<group>";
+		};
+		A094CC9A1D78B5BC00375F08 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				A094CC9B1D78B5BC00375F08 /* blink.c */,
+				A094CC9C1D78B5BC00375F08 /* blink.rtb */,
+				A094CC9D1D78B5BC00375F08 /* blink.sh */,
+				A094CC9E1D78B5BC00375F08 /* blink12.c */,
+				A094CC9F1D78B5BC00375F08 /* blink12drcs.c */,
+				A094CCA01D78B5BC00375F08 /* blink6drcs.c */,
+				A094CCA11D78B5BC00375F08 /* blink8.c */,
+				A094CCA21D78B5BC00375F08 /* clock.c */,
+				A094CCA31D78B5BC00375F08 /* COPYING.LESSER */,
+				A094CCA41D78B5BC00375F08 /* delayTest.c */,
+				A094CCA51D78B5BC00375F08 /* ds1302.c */,
+				A094CCA61D78B5BC00375F08 /* Gertboard */,
+				A094CCAF1D78B5BC00375F08 /* header.h */,
+				A094CCB01D78B5BC00375F08 /* isr-osc.c */,
+				A094CCB11D78B5BC00375F08 /* isr.c */,
+				A094CCB21D78B5BC00375F08 /* lcd-adafruit.c */,
+				A094CCB31D78B5BC00375F08 /* lcd.c */,
+				A094CCB41D78B5BC00375F08 /* lowPower.c */,
+				A094CCB51D78B5BC00375F08 /* Makefile */,
+				A094CCB61D78B5BC00375F08 /* nes.c */,
+				A094CCB71D78B5BC00375F08 /* okLed.c */,
+				A094CCB81D78B5BC00375F08 /* PiFace */,
+				A094CCC01D78B5BC00375F08 /* PiGlow */,
+				A094CCC51D78B5BC00375F08 /* pwm.c */,
+				A094CCC61D78B5BC00375F08 /* q2w */,
+				A094CCCF1D78B5BC00375F08 /* README.TXT */,
+				A094CCD01D78B5BC00375F08 /* rht03.c */,
+				A094CCD11D78B5BC00375F08 /* serialRead.c */,
+				A094CCD21D78B5BC00375F08 /* serialTest.c */,
+				A094CCD31D78B5BC00375F08 /* servo.c */,
+				A094CCD41D78B5BC00375F08 /* softPwm.c */,
+				A094CCD51D78B5BC00375F08 /* softTone.c */,
+				A094CCD61D78B5BC00375F08 /* speed.c */,
+				A094CCD71D78B5BC00375F08 /* spiSpeed.c */,
+				A094CCD81D78B5BC00375F08 /* wfi.c */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		A094CCA61D78B5BC00375F08 /* Gertboard */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCA71D78B5BC00375F08 /* 7segments.c */,
+				A094CCA81D78B5BC00375F08 /* buttons.c */,
+				A094CCA91D78B5BC00375F08 /* gertboard.c */,
+				A094CCAA1D78B5BC00375F08 /* Makefile */,
+				A094CCAB1D78B5BC00375F08 /* record.c */,
+				A094CCAC1D78B5BC00375F08 /* temperature.c */,
+				A094CCAD1D78B5BC00375F08 /* voltmeter.c */,
+				A094CCAE1D78B5BC00375F08 /* vumeter.c */,
+			);
+			path = Gertboard;
+			sourceTree = "<group>";
+		};
+		A094CCB81D78B5BC00375F08 /* PiFace */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCB91D78B5BC00375F08 /* blink.c */,
+				A094CCBA1D78B5BC00375F08 /* buttons.c */,
+				A094CCBB1D78B5BC00375F08 /* ladder.c */,
+				A094CCBC1D78B5BC00375F08 /* Makefile */,
+				A094CCBD1D78B5BC00375F08 /* metro.c */,
+				A094CCBE1D78B5BC00375F08 /* motor.c */,
+				A094CCBF1D78B5BC00375F08 /* reaction.c */,
+			);
+			path = PiFace;
+			sourceTree = "<group>";
+		};
+		A094CCC01D78B5BC00375F08 /* PiGlow */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCC11D78B5BC00375F08 /* Makefile */,
+				A094CCC21D78B5BC00375F08 /* piglow.c */,
+				A094CCC31D78B5BC00375F08 /* piGlow0.c */,
+				A094CCC41D78B5BC00375F08 /* piGlow1.c */,
+			);
+			path = PiGlow;
+			sourceTree = "<group>";
+		};
+		A094CCC61D78B5BC00375F08 /* q2w */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCC71D78B5BC00375F08 /* binary.c */,
+				A094CCC81D78B5BC00375F08 /* blink-io.c */,
+				A094CCC91D78B5BC00375F08 /* blink.c */,
+				A094CCCA1D78B5BC00375F08 /* blink.sh */,
+				A094CCCB1D78B5BC00375F08 /* bright.c */,
+				A094CCCC1D78B5BC00375F08 /* button.c */,
+				A094CCCD1D78B5BC00375F08 /* Makefile */,
+				A094CCCE1D78B5BC00375F08 /* volts.c */,
+			);
+			path = q2w;
+			sourceTree = "<group>";
+		};
+		A094CCD91D78B5BC00375F08 /* gpio */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCDA1D78B5BC00375F08 /* COPYING.LESSER */,
+				A094CCDB1D78B5BC00375F08 /* extensions.c */,
+				A094CCDC1D78B5BC00375F08 /* extensions.h */,
+				A094CCDD1D78B5BC00375F08 /* gpio */,
+				A094CCDE1D78B5BC00375F08 /* gpio.1 */,
+				A094CCDF1D78B5BC00375F08 /* gpio.c */,
+				A094CCE01D78B5BC00375F08 /* Makefile */,
+				A094CCE11D78B5BC00375F08 /* pins.c */,
+				A094CCE21D78B5BC00375F08 /* pintest */,
+				A094CCE31D78B5BC00375F08 /* readall.c */,
+				A094CCE41D78B5BC00375F08 /* test.sh */,
+			);
+			path = gpio;
+			sourceTree = "<group>";
+		};
+		A094CCE71D78B5BC00375F08 /* pins */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCE81D78B5BC00375F08 /* Makefile */,
+				A094CCE91D78B5BC00375F08 /* pins.pdf */,
+				A094CCEA1D78B5BC00375F08 /* pins.tex */,
+			);
+			path = pins;
+			sourceTree = "<group>";
+		};
+		A094CCEC1D78B5BC00375F08 /* wiringPi */ = {
+			isa = PBXGroup;
+			children = (
+				A094CCED1D78B5BC00375F08 /* COPYING.LESSER */,
+				A094CCEE1D78B5BC00375F08 /* drcSerial.c */,
+				A094CCEF1D78B5BC00375F08 /* drcSerial.h */,
+				A094CCF01D78B5BC00375F08 /* libwiringPi.so.2.0 */,
+				A094CCF11D78B5BC00375F08 /* Makefile */,
+				A094CCF21D78B5BC00375F08 /* max31855.c */,
+				A094CCF31D78B5BC00375F08 /* max31855.h */,
+				A094CCF41D78B5BC00375F08 /* max5322.c */,
+				A094CCF51D78B5BC00375F08 /* max5322.h */,
+				A094CCF61D78B5BC00375F08 /* mcp23008.c */,
+				A094CCF71D78B5BC00375F08 /* mcp23008.h */,
+				A094CCF81D78B5BC00375F08 /* mcp23016.c */,
+				A094CCF91D78B5BC00375F08 /* mcp23016.h */,
+				A094CCFA1D78B5BC00375F08 /* mcp23016reg.h */,
+				A094CCFB1D78B5BC00375F08 /* mcp23017.c */,
+				A094CCFC1D78B5BC00375F08 /* mcp23017.h */,
+				A094CCFD1D78B5BC00375F08 /* mcp23s08.c */,
+				A094CCFE1D78B5BC00375F08 /* mcp23s08.h */,
+				A094CCFF1D78B5BC00375F08 /* mcp23s17.c */,
+				A094CD001D78B5BC00375F08 /* mcp23s17.h */,
+				A094CD011D78B5BC00375F08 /* mcp23x08.h */,
+				A094CD021D78B5BC00375F08 /* mcp23x0817.h */,
+				A094CD031D78B5BC00375F08 /* mcp3002.c */,
+				A094CD041D78B5BC00375F08 /* mcp3002.h */,
+				A094CD051D78B5BC00375F08 /* mcp3004.c */,
+				A094CD061D78B5BC00375F08 /* mcp3004.h */,
+				A094CD071D78B5BC00375F08 /* mcp3422.c */,
+				A094CD081D78B5BC00375F08 /* mcp3422.h */,
+				A094CD091D78B5BC00375F08 /* mcp4802.c */,
+				A094CD0A1D78B5BC00375F08 /* mcp4802.h */,
+				A094CD0B1D78B5BC00375F08 /* pcf8574.c */,
+				A094CD0C1D78B5BC00375F08 /* pcf8574.h */,
+				A094CD0D1D78B5BC00375F08 /* pcf8591.c */,
+				A094CD0E1D78B5BC00375F08 /* pcf8591.h */,
+				A094CD0F1D78B5BC00375F08 /* piHiPri.c */,
+				A094CD101D78B5BC00375F08 /* piThread.c */,
+				A094CD111D78B5BC00375F08 /* sn3218.c */,
+				A094CD121D78B5BC00375F08 /* sn3218.h */,
+				A094CD131D78B5BC00375F08 /* softPwm.c */,
+				A094CD141D78B5BC00375F08 /* softPwm.h */,
+				A094CD151D78B5BC00375F08 /* softServo.c */,
+				A094CD161D78B5BD00375F08 /* softServo.h */,
+				A094CD171D78B5BD00375F08 /* softTone.c */,
+				A094CD181D78B5BD00375F08 /* softTone.h */,
+				A094CD191D78B5BD00375F08 /* sr595.c */,
+				A094CD1A1D78B5BD00375F08 /* sr595.h */,
+				A094CD1B1D78B5BD00375F08 /* wiringPi.c */,
+				A094CD1C1D78B5BD00375F08 /* wiringPi.h */,
+				A094CD1D1D78B5BD00375F08 /* wiringPiI2C.c */,
+				A094CD1E1D78B5BD00375F08 /* wiringPiI2C.h */,
+				A094CD1F1D78B5BD00375F08 /* wiringPiSPI.c */,
+				A094CD201D78B5BD00375F08 /* wiringPiSPI.h */,
+				A094CD211D78B5BD00375F08 /* wiringSerial.c */,
+				A094CD221D78B5BD00375F08 /* wiringSerial.h */,
+				A094CD231D78B5BD00375F08 /* wiringShift.c */,
+				A094CD241D78B5BD00375F08 /* wiringShift.h */,
+			);
+			path = wiringPi;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E4B69B5B0A3A1756003C02F2 /* puddingplayerDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* puddingplayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "puddingplayer" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = puddingplayer;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* puddingplayerDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "puddingplayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* puddingplayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved ../../../libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "puddingplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "puddingplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}

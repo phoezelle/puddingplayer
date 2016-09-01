@@ -1,4 +1,5 @@
 #include "ofApp.h"
+#include "wiringPi.h"
 
 
 void ofApp::log(string log,int level,bool color){
@@ -73,6 +74,15 @@ void ofApp::setup(){
   setcurrentCharacter(0);
   checkNetwork();
   
+  if(wiringPiSetup() == -1){
+    log("Error on wiringPi setup\n",WARNING);
+  }
+  else {
+    pinMode(2,INPUT);
+    pullUpDnControl(2,PUD_DOWN);
+  }
+
+  
   
   playBackground();
   
@@ -86,8 +96,8 @@ void ofApp::getPref(){
   
   posX=0;
   posY=0;
-  width=ofGetWidth();
-  height=ofGetHeight();
+  width=ofGetWindowWidth();
+  height=ofGetWindowHeight();
   loglevel=USR;
   
   ofBuffer buffer = ofBufferFromFile(rootDirectory+"config.txt");
@@ -287,6 +297,12 @@ void ofApp::restartScene(){
 //--------------------------------------------------------------
 void ofApp::update(){
   fingerMovie.update();
+  
+  if(digitalRead(2)!=0){
+    log("push on",USR);
+  } else {
+    log("push off",USR);
+  }
 }
 
 //--------------------------------------------------------------
