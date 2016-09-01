@@ -57,7 +57,7 @@ void ofApp::setup(){
   firstlaunch=true;
   loglevel=USR;
   pi=true;
-  currentVideo=0;
+  currentVideo=-1;
   currentScene=0;
   currentBackground=0;
 
@@ -237,6 +237,11 @@ bool ofApp::getMessageRF24(){
 }
 
 void ofApp::playNext(){
+  if (currentVideo==-1){
+    currentVideo=0;
+    play();
+    return;
+  }
   if(mediaList[currentScene][currentVideo] == mediaList[currentScene].back()) {
     if (mediaList[currentScene][currentVideo] == mediaList.back().back()) {
       log("return to first scene",DEBUG);
@@ -252,6 +257,7 @@ void ofApp::playNext(){
 }
 
 void ofApp::play(){
+  if(fingerMovie.isPlaying())fingerMovie.stop();
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
 log("play video "+videoPath, USR);
 fingerMovie.load(videoPath);
@@ -264,6 +270,7 @@ void ofApp::pausePlay(){
 }
 
 void ofApp::playBackground(){
+  if(fingerMovie.isPlaying())fingerMovie.stop();
   string videoPath = rootDirectory+mediaDirectory+"/"+backgroundDirectory+"/"+ backgroundList[currentBackground];
   log("play backgroung video "+videoPath, USR);
   fingerMovie.load(videoPath);
