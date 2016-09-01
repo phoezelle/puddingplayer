@@ -302,14 +302,15 @@ void ofApp::restartScene(){
 //--------------------------------------------------------------
 void ofApp::update(){
   fingerMovie.update();
-  
+  if(pi){
   if(digitalRead(7)!=laststate){
     laststate=digitalRead(7);
-    if (laststate!=0) {
+    if (laststate==0) {
       log("push 7", DEBUG);
       playNext();
     }
-    
+  }
+  }
 }
 
 //--------------------------------------------------------------
