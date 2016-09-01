@@ -57,7 +57,7 @@ void ofApp::setup(){
   firstlaunch=true;
   loglevel=USR;
   pi=true;
-  currentVideo=-1;
+  currentVideo=0;
   currentScene=0;
   currentBackground=0;
 
