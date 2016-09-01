@@ -1,4 +1,0 @@
-loglevel = 2
-dossier_personnage = 01_bazar,02_truc,03_chose
-dossier_background = background
-file_background_default = auto_back.mov
