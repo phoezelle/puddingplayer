@@ -39,9 +39,19 @@ public:
   
   //GPIO
   void initGPIO();
+  void checkGPIO();
   void getAnalogBattery();
   
-  int laststate;
+
+#define PIN_NUM 3
+#define PUSH1 0
+#define PUSH2 2
+#define PUSH3 3
+  
+  int laststate[PIN_NUM];
+  int pin[PIN_NUM];
+  uint64_t startpushtime[PIN_NUM];
+  bool longpush[PIN_NUM];
   
   
   //RF24
@@ -73,6 +83,8 @@ public:
 #define USR 1
 #define DEBUG 2
 #define RAW 3
+  
+
   
   //void checkinputandplayVideo();
   //void playVideoInPath();

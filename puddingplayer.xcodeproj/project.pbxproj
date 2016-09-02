@@ -220,7 +220,6 @@
 		6948EE371B920CB800B5AC1A /* local_addons */ = {
 			isa = PBXGroup;
 			children = (
-				A094CC821D78B5BC00375F08 /* wiringPi */,
 			);
 			name = local_addons;
 			sourceTree = "<group>";
@@ -240,8 +239,8 @@
 				A094CCEC1D78B5BC00375F08 /* wiringPi */,
 			);
 			name = wiringPi;
-			path = "../../../../../../../Volumes/myDoc/documents/régies/komplex/dnc/carte/git/RPi-ShowPlayer/player/Libs/wiringPi";
-			sourceTree = "<group>";
+			path = "/Volumes/myDoc/documents/régies/komplex/dnc/carte/git/RPi-ShowPlayer/player/Libs/wiringPi";
+			sourceTree = "<absolute>";
 		};
 		A094CC851D78B5BC00375F08 /* devLib */ = {
 			isa = PBXGroup;
@@ -478,6 +477,7 @@
 			children = (
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				A094CC821D78B5BC00375F08 /* wiringPi */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,

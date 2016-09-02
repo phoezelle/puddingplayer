@@ -208,15 +208,19 @@ void ofApp::checkNetwork(){
 
 void ofApp::initGPIO(){
   
+  pin[0] = PUSH1;
+  pin[1] = PUSH2;
+  pin[2] = PUSH3;
+  
   if(wiringPiSetup() == -1){
     log("Error on wiringPi setup\n",WARNING);
+  }else {
+    for (int i=0; i<PIN_NUM; i++) {
+      pinMode(pin[i],INPUT);
+      pullUpDnControl(pin[i],PUD_DOWN);
+      laststate[i]=digitalRead(pin[i]);
+    }
   }
-  else {
-    pinMode(7,INPUT);
-    pullUpDnControl(7,PUD_DOWN);
-  }
-  laststate=digitalRead(7);
-  
 }
 
 void ofApp::getAnalogBattery(){
@@ -259,13 +263,14 @@ void ofApp::playNext(){
 void ofApp::play(){
   if(fingerMovie.isPlaying())fingerMovie.stop();
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
-log("play video "+videoPath, USR);
+log("play video "+videoPath, USR,true);
 fingerMovie.load(videoPath);
 fingerMovie.setLoopState(OF_LOOP_NONE);
 fingerMovie.play();
 }
 
 void ofApp::pausePlay(){
+  log("play/pause video ", USR);
   fingerMovie.setPaused(!fingerMovie.isPaused());
 }
 
@@ -282,6 +287,7 @@ void ofApp::playBackground(){
 }
 
 void ofApp::changeBackground(){
+  log("change background ", USR);
   if(backgroundList[currentBackground]==backgroundList.back()){
     currentBackground=0;
   } else {
@@ -290,6 +296,7 @@ void ofApp::changeBackground(){
 }
 
 void ofApp::nextScene(){
+  log("go next scene ", USR);
   if(mediaList[currentScene][currentVideo] != mediaList.back()[currentVideo]){
     currentVideo=0;
     currentScene++;
@@ -298,26 +305,64 @@ void ofApp::nextScene(){
 }
 
 void ofApp::restartScene(){
+  log("restart scene ", USR);
     currentVideo=0;
     play();
   
 }
 
 
+void ofApp::checkGPIO(){
+  for (int i=0; i<PIN_NUM; i++) {
+    int gpio_state = digitalRead(pin[i]);
+    if(gpio_state!=laststate[i]){
+      laststate[i]=gpio_state;
+      if (gpio_state==0) {
+      if(!longpush[i]){
+        log("short push release wiring pi "+ofToString(pin[i]), DEBUG);
+
+      if(i==0){
+        playNext();
+      }
+      if(i==1){
+        pausePlay();
+      }
+      if(i==2){
+        nextScene();
+      }
+        }else{
+          log("long push release wiring pi "+ofToString(pin[i]), DEBUG);
+
+          if(i==1){
+            changeBackground();
+          }
+          if(i==2){
+            restartScene();
+          }
+        }
+      }else{
+        log("push up wiring pi "+ofToString(pin[i]), DEBUG);
+        startpushtime[i]=ofGetElapsedTimeMillis();
+      }
+      longpush[i]=false;
+      
+    }
+    if(gpio_state!=0 && !longpush[i] && ofGetElapsedTimeMillis() - startpushtime[i] > 3000){
+      longpush[i]=true;
+      log("longmode wiring pi "+ofToString(pin[i]), DEBUG);
+    }
+    
+  }
+}
 
 
+
+
+  
 //--------------------------------------------------------------
 void ofApp::update(){
   fingerMovie.update();
-  if(pi){
-  if(digitalRead(7)!=laststate){
-    laststate=digitalRead(7);
-    if (laststate==0) {
-      log("push 7", DEBUG);
-      playNext();
-    }
-  }
-  }
+  if(pi)checkGPIO();
 }
 
 //--------------------------------------------------------------
