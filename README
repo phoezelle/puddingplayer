@@ -1,0 +1,41 @@
+penser à :
+passer en azerty + partage ram + …
+  raspi-config
+ctreate root passwd and log root
+  sudo passwd root
+update and upgrade apt-get
+  apt-get clean
+  apt-get update
+  apt-get upgrade
+install screen
+  apt-get screen
+install openframworks + script : dependancies.sh + scripts : codecs.sh
+  cd /home/pi
+  wget http://openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz
+  mkdir openFrameworks
+  tar vxfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+  cd /home/pi/openFrameworks/scripts/linux/debian
+  ./install_dependencies.sh
+  ./install_codecs.sh
+install wiringpi
+  apt-get install wiringPi
+compil openframeworks
+  make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
+add my ssh key
+  (on my terminal) ssh-copy-id pi@X.X.X.X (IP of pi)
+install git-core and clone git repo
+  apt-get install git-core
+  cd /home/pi/openFrameworks/apps/myApps/
+  git clone https://github.com/phoezelle/puddingplayer.git puddingplayer
+compil project
+  cd puddingplayer/
+  make -j4
+create init script
+  sudo nano /etc/init.d/puddingplayer
+  chmod +x /etc/init.d/puddingplayer
+  insserv -v puddingplayer
+hdmi auto hot plug
+  nano /boot/config.txt
+définir un réseau de secours
+    nano /etc/wpa_supplicant/wpa_supplicant.conf
+passer en lecture seule le pi
