@@ -35,7 +35,8 @@ test it in screen attach mode
 create init script
   nano /etc/init.d/puddingplayer
   chmod +x /etc/init.d/puddingplayer
-  insserv -v puddingplayer
+add call to the script in rc.local
+  nano /etc/rc.local
 hdmi auto hot plug
   nano /boot/config.txt
 définir un réseau de secours
