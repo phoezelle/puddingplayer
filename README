@@ -30,8 +30,10 @@ install git-core and clone git repo
 compil project
   cd puddingplayer/
   make -j4
+test it in screen attach mode
+  screen -S pudding -m  /home/pi/openFrameworks/apps/myApps/puddingplayer/bin/puddingplayer
 create init script
-  sudo nano /etc/init.d/puddingplayer
+  nano /etc/init.d/puddingplayer
   chmod +x /etc/init.d/puddingplayer
   insserv -v puddingplayer
 hdmi auto hot plug
