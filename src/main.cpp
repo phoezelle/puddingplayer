@@ -4,7 +4,7 @@
 //========================================================================
 int main( ){
   
-	ofSetupOpenGL(1200 ,800, OF_FULLSCREEN);			// <-------- setup the GL context
+	ofSetupOpenGL(1920 ,1280, OF_FULLSCREEN);			// <-------- setup the GL context
   
   ofGLESWindowSettings settings;
   settings.setGLESVersion(2);
