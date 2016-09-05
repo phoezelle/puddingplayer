@@ -60,7 +60,6 @@ void ofApp::setup(){
   currentVideo=-1;
   currentScene=0;
   currentBackground=0;
-
   
   log("STARTUP",USR,true);
   
@@ -121,6 +120,8 @@ void ofApp::getPref(){
 	}else{
     log(rootDirectory+"config.txt file not found",WARNING);
   }
+  
+  ofSetWindowShape(width, height);
 }
 
 
