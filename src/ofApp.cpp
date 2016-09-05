@@ -94,7 +94,7 @@ void ofApp::getPref(){
   posY=0;
   width=ofGetWindowWidth();
   height=ofGetWindowHeight();
-  loglevel=USR;
+  loglevel=DEBUG;
   
   ofBuffer buffer = ofBufferFromFile(rootDirectory+"config.txt");
 	if(buffer.size()) {
@@ -242,17 +242,18 @@ bool ofApp::getMessageRF24(){
 
 void ofApp::playNext(){
   if (currentVideo==-1){
+    log("first time play",DEBUG);
     currentVideo=0;
     play();
     return;
   }
+  if (mediaList[currentScene][currentVideo] == mediaList.back().back()) {
+    log("return to first scene",DEBUG);
+    currentScene=0;currentVideo=0;
+  }
   if(mediaList[currentScene][currentVideo] == mediaList[currentScene].back()) {
-    if (mediaList[currentScene][currentVideo] == mediaList.back().back()) {
-      log("return to first scene",DEBUG);
-      currentScene=0;currentVideo=0;
-    }else{
     log("go next scene",DEBUG);
-      currentScene++;currentVideo=0;    }
+      currentScene++;currentVideo=0;
   }else{
     log("go next video",DEBUG);
     currentVideo++;
@@ -281,9 +282,6 @@ void ofApp::playBackground(){
   fingerMovie.load(videoPath);
   fingerMovie.setLoopState(OF_LOOP_NONE);
   fingerMovie.play();
-  
-  
-  
 }
 
 void ofApp::changeBackground(){
@@ -296,11 +294,13 @@ void ofApp::changeBackground(){
 }
 
 void ofApp::nextScene(){
-  log("go next scene ", USR);
   if(mediaList[currentScene][currentVideo] != mediaList.back()[currentVideo]){
+    log("go next scene ", USR);
     currentVideo=0;
     currentScene++;
     play();
+  }else{
+    log("no next scene ", USR);
   }
 }
 
