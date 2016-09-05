@@ -92,8 +92,8 @@ void ofApp::getPref(){
   
   posX=0;
   posY=0;
-  width=ofGetWindowWidth();
-  height=ofGetWindowHeight();
+  width=ofGetScreenWidth();
+  height=ofGetScreenHeight();
   log("screen size "+ofToString(ofGetWindowWidth())+" x "+ofToString(ofGetWindowHeight())+" / "+ofToString(ofGetScreenWidth())+" x "+ofToString(ofGetScreenHeight()),USR);
   loglevel=DEBUG;
   
