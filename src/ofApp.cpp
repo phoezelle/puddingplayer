@@ -247,13 +247,14 @@ void ofApp::playNext(){
   if (mediaList[currentScene][currentVideo] == mediaList.back().back()) {
     log("return to first scene",DEBUG);
     currentScene=0;currentVideo=0;
-  }
+  }else{
   if(mediaList[currentScene][currentVideo] == mediaList[currentScene].back()) {
     log("go next scene",DEBUG);
       currentScene++;currentVideo=0;
   }else{
     log("go next video",DEBUG);
     currentVideo++;
+  }
   }
   play();
 }
