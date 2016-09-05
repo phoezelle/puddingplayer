@@ -41,4 +41,6 @@ hdmi auto hot plug
   nano /boot/config.txt
 définir un réseau de secours
     nano /etc/wpa_supplicant/wpa_supplicant.conf
+disable screen saver
+    nano /etc/kbd/config
 passer en lecture seule le pi
