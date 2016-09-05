@@ -44,3 +44,4 @@ définir un réseau de secours
 disable screen saver
     nano /etc/kbd/config
 passer en lecture seule le pi
+  http://blog.pi3g.com/2014/04/make-raspbian-system-read-only/
