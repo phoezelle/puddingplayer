@@ -188,8 +188,6 @@ void ofApp::buildMediaList(){
   }else{
     log("no background media found in " + mediaDirectory+"/"+backgroundDirectory,WARNING);
   }
-
-    
 }
 
 void ofApp::checkNetwork(){
@@ -264,7 +262,7 @@ void ofApp::playNext(){
 void ofApp::play(){
   if(fingerMovie.isPlaying())fingerMovie.stop();
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
-log("play video "+videoPath, USR,true);
+log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
 fingerMovie.load(videoPath);
 fingerMovie.setLoopState(OF_LOOP_NONE);
 fingerMovie.play();
