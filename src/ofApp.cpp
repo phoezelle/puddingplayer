@@ -73,6 +73,7 @@ void ofApp::setup(){
     usbstickMount();
     initGPIO();
   }
+  ofBackground(0,0,0);
   getPref();
   setcurrentCharacter(0);
   checkNetwork();
