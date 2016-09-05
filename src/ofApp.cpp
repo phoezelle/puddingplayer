@@ -94,6 +94,7 @@ void ofApp::getPref(){
   posY=0;
   width=ofGetWindowWidth();
   height=ofGetWindowHeight();
+  log("screen size "+ofToString(ofGetWindowWidth())+" x "+ofToString(ofGetWindowHeight())+" / "+ofToString(ofGetScreenWidth())+" x "+ofToString(ofGetScreenHeight()),USR);
   loglevel=DEBUG;
   
   ofBuffer buffer = ofBufferFromFile(rootDirectory+"config.txt");
