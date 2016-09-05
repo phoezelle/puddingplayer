@@ -163,7 +163,6 @@ void ofApp::buildMediaList(){
         lastScene = numScene;
         mediaList.push_back(scene);
         scene.clear();
-        scene.push_back(media);
       }
       log(media,DEBUG);
       scene.push_back(media);
