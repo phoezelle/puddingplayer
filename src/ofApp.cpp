@@ -69,8 +69,9 @@ void ofApp::setup(){
   
   definePlateform();
   if (pi) {
-    usbstickMount();
     initGPIO();
+    usbstickMount();
+    
   }
   ofBackground(0,0,0);
   getPref();
@@ -220,6 +221,12 @@ void ofApp::initGPIO(){
       pullUpDnControl(pin[i],PUD_DOWN);
       laststate[i]=digitalRead(pin[i]);
     }
+    pinMode(LEDR,OUTPUT);
+    pinMode(LEDG,OUTPUT);
+    digitalWrite(LEDG, HIGH);
+    delay(200);
+    digitalWrite(LEDG, LOW);
+    
   }
 }
 

@@ -45,7 +45,7 @@ disable screen saver
     nano /etc/kbd/config
 permit root login
     sudo nano /etc/ssh/sshd_config
-ative spi (dtparam=spi=on)
+active spi (dtparam=spi=on)
     sudo nano /boot/config.txt
 
 

@@ -195,6 +195,7 @@
 		A094CD221D78B5BD00375F08 /* wiringSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringSerial.h; sourceTree = "<group>"; };
 		A094CD231D78B5BD00375F08 /* wiringShift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wiringShift.c; sourceTree = "<group>"; };
 		A094CD241D78B5BD00375F08 /* wiringShift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringShift.h; sourceTree = "<group>"; };
+		A0EF7C1F1E284035007ED0BE /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* puddingplayerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puddingplayerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -483,6 +484,7 @@
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* puddingplayerDebug.app */,
+				A0EF7C1F1E284035007ED0BE /* README */,
 			);
 			sourceTree = "<group>";
 		};

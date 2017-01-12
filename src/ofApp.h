@@ -44,9 +44,12 @@ public:
   
 
 #define PIN_NUM 3
-#define PUSH1 0
-#define PUSH2 2
-#define PUSH3 3
+#define PUSH1 1
+#define PUSH2 4
+#define PUSH3 5
+
+#define LEDR 0
+#define LEDG 2
   
   int laststate[PIN_NUM];
   int pin[PIN_NUM];
