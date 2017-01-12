@@ -224,9 +224,13 @@ void ofApp::initGPIO(){
     }
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
+    while(1){
     digitalWrite(LEDG, HIGH);
     delay(1000);
     digitalWrite(LEDG, LOW);
+    delay(1000);
+    }
+    
     
   }
 }
