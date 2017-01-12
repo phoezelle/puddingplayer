@@ -43,5 +43,12 @@ définir un réseau de secours
     nano /etc/wpa_supplicant/wpa_supplicant.conf
 disable screen saver
     nano /etc/kbd/config
+permit root login
+    sudo nano /etc/ssh/sshd_config
+ative spi (dtparam=spi=on)
+    sudo nano /boot/config.txt
+
+
+
 passer en lecture seule le pi
   http://blog.pi3g.com/2014/04/make-raspbian-system-read-only/
