@@ -216,6 +216,7 @@ void ofApp::initGPIO(){
   if(wiringPiSetup() == -1){
     log("Error on wiringPi setup\n",WARNING);
   }else {
+    log("configure GPIO", USR);
     for (int i=0; i<PIN_NUM; i++) {
       pinMode(pin[i],INPUT);
       pullUpDnControl(pin[i],PUD_DOWN);
@@ -224,7 +225,7 @@ void ofApp::initGPIO(){
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
     digitalWrite(LEDG, HIGH);
-    delay(200);
+    delay(1000);
     digitalWrite(LEDG, LOW);
     
   }
