@@ -1,5 +1,6 @@
 #include "ofApp.h"
 #include "wiringPi.h"
+#include <wiringPiSPI.h>
 
 
 void ofApp::log(string log,int level,bool color){
@@ -224,11 +225,18 @@ void ofApp::initGPIO(){
     }
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
+    if( wiringPiSPISetup (0, 4000000)==-1){
+      log("Error on wiringPi SPI setup\n",WARNING);
+    }
+    unsigned char buff[2];
+    buff[0]='a';
+    buff[1]='9';
     while(1){
-    digitalWrite(LEDG, HIGH);
-    delay(1000);
-    digitalWrite(LEDG, LOW);
-    delay(1000);
+      digitalWrite(LEDG, HIGH);
+      wiringPiSPIDataRW(0,buff,2);
+      delay(1000);
+      digitalWrite(LEDG, LOW);
+      delay(1000);
     }
     
     
