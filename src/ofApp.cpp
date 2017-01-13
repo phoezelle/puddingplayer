@@ -228,12 +228,11 @@ void ofApp::initGPIO(){
     if( wiringPiSPISetup (0, 4000000)==-1){
       log("Error on wiringPi SPI setup\n",WARNING);
     }
-    unsigned char buff[2];
+    unsigned char buff[1];
     buff[0]='a';
-    buff[1]='9';
     while(1){
       digitalWrite(LEDG, HIGH);
-      wiringPiSPIDataRW(0,buff,2);
+      wiringPiSPIDataRW(0,buff,1);
       delay(1000);
       digitalWrite(LEDG, LOW);
       delay(1000);
