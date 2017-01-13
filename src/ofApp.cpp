@@ -1,7 +1,15 @@
 #include "ofApp.h"
 #include "wiringPi.h"
 #include <wiringPiSPI.h>
+#include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <unistd.h>
+#include <RF24.h>
 
+
+RF24 radio(RPI_V2_GPIO_P1_22, RPI_V2_GPIO_P1_24, BCM2835_SPI_SPEED_4MHZ);
 
 void ofApp::log(string log,int level,bool color){
   if(level<=loglevel){
@@ -228,6 +236,8 @@ void ofApp::initGPIO(){
     if( wiringPiSPISetup (0, 4000000)==-1){
       log("Error on wiringPi SPI setup\n",WARNING);
     }
+    
+    
     unsigned char buff[1];
     buff[0]='a';
     while(1){
