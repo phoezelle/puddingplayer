@@ -233,19 +233,34 @@ void ofApp::initGPIO(){
     }
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
-    if( wiringPiSPISetup (0, 4000000)==-1){
-      log("Error on wiringPi SPI setup\n",WARNING);
-    }
     
+    const uint64_t receiveingPrefix = 0xF6FEE60000LL;
+    radio.begin();
+    radio.setRetries(1,6);
+    radio.setPayloadSize(8);
+    radio.enableAckPayload();
+    radio.setChannel(122);
+    //radio.setDataRate(RF24_250KBPS);
+    radio.setPALevel(RF24_PA_MAX);
+    uint64_t address = receiveingPrefix | 8;
+    radio.openReadingPipe(1,address);
+    delay(1000);
+    radio.printDetails();
+    if (radio.isPVariant()) std::cout << "radio OK" << '\n';
+    radio.startListening();
     
     unsigned char buff[1];
     buff[0]='a';
     while(1){
-      digitalWrite(LEDG, HIGH);
-      wiringPiSPIDataRW(0,buff,1);
-      delay(1000);
-      digitalWrite(LEDG, LOW);
-      delay(1000);
+      if(millis()%1000>700)digitalWrite(LEDG, HIGH); else digitalWrite(LEDG, LOW);
+      while(radio.available()){
+        radio.read(&data,32);
+        cout << "data : " ;
+        for(int i = 0; i<32;i++){
+          cout << (int)data[i] << '-';
+        }
+      }
+      delay(1);
     }
     
     
