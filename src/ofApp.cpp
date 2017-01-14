@@ -229,11 +229,14 @@ void ofApp::initGPIO(){
     for (int i=0; i<PIN_NUM; i++) {
       pinMode(pin[i],INPUT);
       pullUpDnControl(pin[i],PUD_DOWN);
+      log("read initial state of pin", USR);
       laststate[i]=digitalRead(pin[i]);
     }
+    delay(1);
     log("configure GPIO OUT", USR);
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
+    delay(1);
     log("start RF24", USR);
     uint64_t receiveingPrefix = 0xF6FEE60000LL;
     radio.begin();
@@ -252,8 +255,7 @@ void ofApp::initGPIO(){
     if (radio.isPVariant()) std::cout << "radio OK" << '\n';
     radio.startListening();
     
-    unsigned char buff[1];
-    buff[0]='a';
+
     while(1){
       if(millis()%1000>700)digitalWrite(LEDG, HIGH); else digitalWrite(LEDG, LOW);
       while(radio.available()){
