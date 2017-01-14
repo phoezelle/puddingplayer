@@ -224,12 +224,12 @@ void ofApp::initGPIO(){
     log("Error on wiringPi setup\n",WARNING);
   }else {
     log("configure GPIO IN", USR);
-    /*for (int i=0; i<PIN_NUM; i++) {
+    for (int i=0; i<PIN_NUM; i++) {
       pinMode(pin[i],INPUT);
       pullUpDnControl(pin[i],PUD_DOWN);
       log("read initial state of pin", USR);
       laststate[i]=digitalRead(pin[i]);
-    }*/
+    }
     delay(1);
     log("configure GPIO OUT", USR);
     pinMode(LEDR,OUTPUT);
