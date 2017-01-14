@@ -16,6 +16,10 @@
 #include <unistd.h>
 #include <RF24/RF24.h>
 
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
 using namespace std;
 const uint64_t receiveingPrefix = 0xF6FEE60000LL;
 uint8_t data[32];
@@ -24,6 +28,14 @@ RF24 radio(RPI_V2_GPIO_P1_22, RPI_V2_GPIO_P1_24, BCM2835_SPI_SPEED_4MHZ);
 
 
 int main(int argc, char** argv){
+  
+  int fd;
+  char * myfifo = "/tmp/myfifo";
+  /* create the FIFO (named pipe) */
+  mkfifo(myfifo, 0666);
+  /* write "Hi" to the FIFO */
+  fd = open(myfifo, O_WRONLY);
+  
   std::cout << "start" << '\n';
   radio.begin();
   radio.setRetries(1,6);

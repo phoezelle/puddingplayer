@@ -235,8 +235,17 @@ void ofApp::initGPIO(){
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
     
-    
   }
+  
+  while (1){
+    string input;
+    getline(cin, input);
+    if(input.length()>3){
+      log("cin = "+input, USR);
+    }
+  }
+  
+  
 }
 
 void ofApp::getAnalogBattery(){
