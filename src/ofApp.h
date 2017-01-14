@@ -56,16 +56,7 @@ public:
   uint64_t startpushtime[PIN_NUM];
   bool longpush[PIN_NUM];
   
-  
-  //RF24
-  void initRF24();
-  void setAdressRF24();
-  bool getMessageRF24();
-  void sendConfirm();
-  uint8_t data[32];
-  
-  uint64_t ackT, lastReceivedMessage;
-  int counterGoodMessage;
+
   
   //VIDEOPLAYER
   ofVideoPlayer 		fingerMovie;

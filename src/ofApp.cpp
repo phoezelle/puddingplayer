@@ -6,10 +6,8 @@
 #include <sstream>
 #include <string>
 #include <unistd.h>
-#include <RF24/RF24.h>
 
 
-RF24 radio(RPI_V2_GPIO_P1_22, RPI_V2_GPIO_P1_24, BCM2835_SPI_SPEED_4MHZ);
 
 void ofApp::log(string log,int level,bool color){
   if(level<=loglevel){
@@ -236,37 +234,6 @@ void ofApp::initGPIO(){
     log("configure GPIO OUT", USR);
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
-    delay(1);
-    log("start RF24", USR);
-    uint64_t receiveingPrefix = 0xF6FEE60000LL;
-    radio.begin();
-    log("configure RF24", USR);
-    radio.setRetries(1,6);
-    radio.setPayloadSize(8);
-    radio.enableAckPayload();
-    radio.setChannel(122);
-    //radio.setDataRate(RF24_250KBPS);
-    radio.setPALevel(RF24_PA_MAX);
-    uint64_t address = receiveingPrefix | 8;
-    log("open pipe RF24", USR);
-    radio.openReadingPipe(1,address);
-    delay(1000);
-    radio.printDetails();
-    if (radio.isPVariant()) std::cout << "radio OK" << '\n';
-    radio.startListening();
-    
-
-    while(1){
-      if(millis()%1000>700)digitalWrite(LEDG, HIGH); else digitalWrite(LEDG, LOW);
-      while(radio.available()){
-        radio.read(&data,32);
-        cout << "data : " ;
-        for(int i = 0; i<32;i++){
-          cout << (int)data[i] << '-';
-        }
-      }
-      delay(1);
-    }
     
     
   }
@@ -276,18 +243,6 @@ void ofApp::getAnalogBattery(){
   
 }
 
-void ofApp::initRF24(){
-  
-}
-
-void ofApp::setAdressRF24(){
-  
-}
-
-bool ofApp::getMessageRF24(){
-  return false;
-  
-}
 
 void ofApp::playNext(){
   if (currentVideo==-1){
