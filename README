@@ -19,6 +19,13 @@ install openframworks + script : dependancies.sh + scripts : codecs.sh
   ./install_codecs.sh
 install wiringpi
   apt-get install wiringPi
+install RF24
+  $ mkdir nrf24l01
+  $ cd nrf24l01
+  $ git clone https://github.com/TMRh20/RF24.git
+  $ cd RF24
+  $ make
+  $ sudo make install
 compil openframeworks
   make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
 add my ssh key

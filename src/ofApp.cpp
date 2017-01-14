@@ -225,17 +225,19 @@ void ofApp::initGPIO(){
   if(wiringPiSetup() == -1){
     log("Error on wiringPi setup\n",WARNING);
   }else {
-    log("configure GPIO", USR);
+    log("configure GPIO IN", USR);
     for (int i=0; i<PIN_NUM; i++) {
       pinMode(pin[i],INPUT);
       pullUpDnControl(pin[i],PUD_DOWN);
       laststate[i]=digitalRead(pin[i]);
     }
+    log("configure GPIO OUT", USR);
     pinMode(LEDR,OUTPUT);
     pinMode(LEDG,OUTPUT);
-    
-    const uint64_t receiveingPrefix = 0xF6FEE60000LL;
+    log("start RF24", USR);
+    uint64_t receiveingPrefix = 0xF6FEE60000LL;
     radio.begin();
+    log("configure RF24", USR);
     radio.setRetries(1,6);
     radio.setPayloadSize(8);
     radio.enableAckPayload();
@@ -243,6 +245,7 @@ void ofApp::initGPIO(){
     //radio.setDataRate(RF24_250KBPS);
     radio.setPALevel(RF24_PA_MAX);
     uint64_t address = receiveingPrefix | 8;
+    log("open pipe RF24", USR);
     radio.openReadingPipe(1,address);
     delay(1000);
     radio.printDetails();
