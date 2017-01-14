@@ -378,7 +378,7 @@ void ofApp::checkREMOTE(){
   //log("read cin",USR);
   getline(cin, input);
   if(input.length()>3){
-    //log("cin = "+input, USR);
+    log("cin = "+input, USR);
     if(input.compare(0, 6, "OKDATA")==0){
       log("receive order : "+input.substr(7,1), USR);
     }
