@@ -243,7 +243,7 @@ void ofApp::initGPIO(){
     getline(cin, input);
     if(input.length()>3){
       log("cin = "+input, USR);
-      if (input.compare("INITEND")) break;
+      if (input.compare("INITEND")==0) break;
     }
   }
   
@@ -378,7 +378,7 @@ void ofApp::checkREMOTE(){
   getline(cin, input);
   if(input.length()>3){
     log("cin = "+input, USR);
-    if(input.compare(0, 6, "OKDATA")){
+    if(input.compare(0, 6, "OKDATA")==0){
       log("receive order : "+input.substr(7,1), USR);
     }
   }
