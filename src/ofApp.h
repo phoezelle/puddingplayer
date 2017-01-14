@@ -42,6 +42,8 @@ public:
   void checkGPIO();
   void getAnalogBattery();
   
+  void checkREMOTE();
+  
 
 #define PIN_NUM 3
 #define PUSH1 1

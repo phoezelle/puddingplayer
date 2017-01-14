@@ -237,11 +237,14 @@ void ofApp::initGPIO(){
     
   }
   
+  log("wait for RF24 config", USR);
   while (1){
     string input;
     getline(cin, input);
     if(input.length()>3){
       log("cin = "+input, USR);
+      if (input.compare("INITEND"));
+      break;
     }
   }
   
@@ -371,12 +374,26 @@ void ofApp::checkGPIO(){
 
 
 
+void ofApp::checkREMOTE(){
+  string input;
+  getline(cin, input);
+  if(input.length()>3){
+    log("cin = "+input, USR);
+    if(input.compare(0, 6, "OKDATA"){
+      log("receive order "+input[7], USR);
+    }
+  }
+}
+
+
+
 
   
 //--------------------------------------------------------------
 void ofApp::update(){
   fingerMovie.update();
   if(pi)checkGPIO();
+  if(pi)checkREMOTE();
 }
 
 //--------------------------------------------------------------
