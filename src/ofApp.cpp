@@ -86,9 +86,8 @@ void ofApp::setup(){
   getPref();
   setcurrentCharacter(0);
   checkNetwork();
-
-
   
+  thread.startThread(true, false);
   
   playBackground();
   
@@ -516,6 +515,12 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
   
+}
+
+void ofApp::exit() {
+  
+  // stop the thread
+  thread.stopThread();
 }
 
 
