@@ -15,7 +15,10 @@
 
 class Checkremote : public ofThread {
   
-  ofThreadChannel<int> myThreadChannel;
+  //ofThreadChannel<int> myThreadChannel;
+  
+  public :
+  
   
   // the thread function
   void threadedFunction() {
@@ -32,13 +35,17 @@ class Checkremote : public ofThread {
         if(input.compare(0, 6, "OKDATA")==0  && ofGetElapsedTimeMillis()-starttime > 1500){
           starttime = ofGetElapsedTimeMillis();
           std::cout << "receive order : " << input.substr(7,1) << std::endl;
-          myThreadChannel.send(std::move(ofToInt(input.substr(7,1))));
+          //myThreadChannel.send(std::move(ofToInt(input.substr(7,1))));
+          lock();
+          order = ofToInt(input.substr(7,1));
+          unlock();
         }
       }
     }
     
     // done
   }
+          int order = 0;
   
 };
 

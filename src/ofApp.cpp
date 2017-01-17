@@ -376,7 +376,12 @@ void ofApp::checkGPIO(){
 
 void ofApp::checkREMOTE(){
   int myorder=0;
-  if (myThreadChannel.tryReceive(myorder)){
+  thread.lock();
+  myorder=thread.order;
+  thread.order=0;
+  thread.unlock();
+  if (myorder > 0){
+    thread.order=0;
     log("get order"+ofToString(myorder),USR);
     switch (myorder) {
       case 1:

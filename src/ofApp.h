@@ -47,7 +47,7 @@ public:
   void getAnalogBattery();
   
   void checkREMOTE();
-  ofThreadChannel<int> myThreadChannel;
+  //ofThreadChannel<int> myThreadChannel;
   
 
 #define PIN_NUM 3
