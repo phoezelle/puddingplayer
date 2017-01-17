@@ -377,6 +377,7 @@ void ofApp::checkGPIO(){
 void ofApp::checkREMOTE(){
   int myorder=0;
   if (myThreadChannel.tryReceive(myorder)){
+    log("get order"+ofToString(myorder),USR);
     switch (myorder) {
       case 1:
         playNext();
