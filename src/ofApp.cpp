@@ -20,6 +20,8 @@ void ofApp::log(string log,int level,bool color){
   }
 }
 
+
+
 void ofApp::definePlateform(){
   ofTargetPlatform myRun = ofGetTargetPlatform();
   if (myRun==OF_TARGET_LINUXARMV7L || myRun==OF_TARGET_LINUXARMV6L){
@@ -374,13 +376,29 @@ void ofApp::checkGPIO(){
 
 
 void ofApp::checkREMOTE(){
-  string input;
-  //log("read cin",USR);
-  getline(cin, input);
-  if(input.length()>3){
-    log("cin = "+input, USR);
-    if(input.compare(0, 6, "OKDATA")==0){
-      log("receive order : "+input.substr(7,1), USR);
+  int myorder=0;
+  if (myThreadChannel.tryReceive(myorder)){
+    switch (myorder) {
+      case 1:
+        playNext();
+        break;
+      case 2:
+        break;
+      case 3:
+        pausePlay();
+        break;
+      case 4:
+        changeBackground();
+        break;
+      case 5:
+        nextScene();
+        break;
+      case 6:
+        restartScene();
+        break;
+        
+      default:
+        break;
     }
   }
 }
