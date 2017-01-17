@@ -87,7 +87,7 @@ void ofApp::setup(){
   setcurrentCharacter(0);
   checkNetwork();
   
-  thread.startThread(true, false);
+  thread.startThread(true);
   
   playBackground();
   

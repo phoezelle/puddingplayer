@@ -18,7 +18,7 @@ class Checkremote : public ofThread {
   ofThreadChannel<int> myThreadChannel;
   
   // the thread function
-  void Checkremote::threadedFunction() {
+  void threadedFunction() {
     
     // start
     
