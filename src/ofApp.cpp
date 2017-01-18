@@ -27,6 +27,7 @@ void ofApp::definePlateform(){
   if (myRun==OF_TARGET_LINUXARMV7L || myRun==OF_TARGET_LINUXARMV6L){
     pi=true;
     fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
+    fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
     rootDirectory="/tmp/stick";
     log("RASPI DETECT path from usb stick", USR);
     
@@ -315,7 +316,6 @@ void ofApp::play(){
     log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
   }
   
-  
   if(nvideo==0){
     log("delete video2",USR);
     delete fingerMovie;
@@ -326,7 +326,6 @@ void ofApp::play(){
     fingerMovie2->setLoopState(OF_LOOP_NONE);
     fingerMovie2->play();
   }
-  
   if(nvideo==1){
     log("delete video1",USR);
     delete fingerMovie;
@@ -362,7 +361,8 @@ void ofApp::clearVideo(int n){
 
 void ofApp::pausePlay(){
   log("play/pause video ", USR);
-  fingerMovie->setPaused(!fingerMovie->isPaused());
+  if(nvideo==0)fingerMovie->setPaused(!fingerMovie->isPaused());
+  if(nvideo==1)fingerMovie2->setPaused(!fingerMovie2->isPaused());
 }
 
 void ofApp::playBackground(){
@@ -555,9 +555,17 @@ void ofApp::draw(){
     ofDrawBitmapString(firstMessage,100,420);
   }
   
-  if(fingerMovie->getIsMovieDone()){
-    log("end video",DEBUG);
-    playBackground();
+  if(nvideo==0 && !gochangevideo){
+    if(fingerMovie->getIsMovieDone()){
+      log("end video",DEBUG);
+      playBackground();
+    }
+  }
+  if(nvideo==1 && !gochangevideo){
+    if(fingerMovie2->getIsMovieDone()){
+      log("end video",DEBUG);
+      playBackground();
+    }
   }
 }
 
