@@ -533,30 +533,38 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  if(nvideo==0 && gochangevideo==1 && fingerMovie2->isLoaded()){
+  if(nvideo==0 && gochangevideo==1){
+    if(fingerMovie2->isLoaded()){
     log("start play video 2", USR);
     fingerMovie2->play();
     gochangevideo=2;
+    }
   }
-  if(nvideo==1 && gochangevideo==1 && fingerMovie->isLoaded()){
+  if(nvideo==1 && gochangevideo==1){
+    if(fingerMovie->isLoaded()){
     log("start play video 1", USR);
     fingerMovie->play();
     gochangevideo=2;
+    }
   }
   
-  if(nvideo==0 && gochangevideo==2 && fingerMovie2->isFrameNew()){
+  if(nvideo==0 && gochangevideo==2){
+    if(fingerMovie2->isFrameNew()){
     log("switch from video 1 to 2", USR);
     clearVideo(nvideo);
     gochangevideo=0;
     nvideo=1;
     log("video1 is stop", USR);
+    }
   }
-  if(nvideo==1 && gochangevideo==2 && fingerMovie->isFrameNew()){
+  if(nvideo==1 && gochangevideo==2){
+    if(fingerMovie->isFrameNew()){
     log("switch from video 2 to 1", USR);
     clearVideo(nvideo);
     gochangevideo=0;
     nvideo=0;
     log("video2 is stop", USR);
+    }
   }
 
   
