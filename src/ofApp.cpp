@@ -491,7 +491,7 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  fingerMovie->draw(posX,posY,width+128,height+72);
+  if(fingerMovie->isFrameNew()) fingerMovie->draw(posX,posY,width+128,height+72);
   ofSetHexColor(0xff3300);
   
   if(ofGetElapsedTimeMillis()<60000){
