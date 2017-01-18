@@ -576,13 +576,13 @@ void ofApp::draw(){
     ofDrawBitmapString(firstMessage,100,420);
   }
   
-  if(nvideo==0 && !gochangevideo){
+  if(nvideo==0 && gochangevideo==0){
     if(fingerMovie->getIsMovieDone()){
       log("end video",DEBUG);
       playBackground();
     }
   }
-  if(nvideo==1 && !gochangevideo){
+  if(nvideo==1 && gochangevideo==0){
     if(fingerMovie2->getIsMovieDone()){
       log("end video",DEBUG);
       playBackground();
