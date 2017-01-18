@@ -72,6 +72,7 @@ public:
 #define LEDR 0
 #define LEDG 2
   
+  
   int laststate[PIN_NUM];
   int pin[PIN_NUM];
   uint64_t startpushtime[PIN_NUM];
@@ -83,7 +84,7 @@ public:
   ofVideoPlayer 		*fingerMovie;
   ofVideoPlayer     *fingerMovie2;
   int nvideo;
-  bool gochangevideo;
+  int gochangevideo;
   bool isplayground;
   void play();
   void playNext();

@@ -78,7 +78,7 @@ void ofApp::setup(){
   ledR_time_period = 200;
   
   nvideo=0;
-  gochangevideo=false;
+  gochangevideo=0;
   isplayground=true;
   
   
@@ -305,7 +305,7 @@ void ofApp::playNext(){
 }
 
 void ofApp::play(){
-  gochangevideo=true;
+  gochangevideo=1;
   flash_ledG(1);
   string videoPath="";
   if(isplayground){
@@ -319,22 +319,23 @@ void ofApp::play(){
   if(nvideo==0){
     //log("delete video2",USR);
     //delete fingerMovie;
-    log("create video2",USR);
+    //log("create video2",USR);
     //fingerMovie2 = new ofVideoPlayer();
     fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
-    fingerMovie2->load(videoPath);
     fingerMovie2->setLoopState(OF_LOOP_NONE);
-    fingerMovie2->play();
+    log("load video2",USR);
+    fingerMovie2->loadAsync(videoPath);
   }
+  
   if(nvideo==1){
     //log("delete video1",USR);
     //delete fingerMovie;
-    log("create video1",USR);
+    //log("create video1",USR);
     //fingerMovie = new ofVideoPlayer();
     fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
-    fingerMovie->load(videoPath);
     fingerMovie->setLoopState(OF_LOOP_NONE);
-    fingerMovie->play();
+    log("load video1",USR);
+    fingerMovie->loadAsync(videoPath);
   }
 }
 
@@ -346,7 +347,7 @@ void ofApp::clearVideo(int n){
       delay(10);
     }
     //log("close previous video1",USR);
-    //fingerMovie->close();
+    fingerMovie->close();
   }
   if (n==1 && fingerMovie2!=nullptr) {
     if(fingerMovie2->isPlaying()){
@@ -355,7 +356,7 @@ void ofApp::clearVideo(int n){
       delay(10);
     }
     //log("close previous video2",USR);
-    //fingerMovie2->close();
+    fingerMovie2->close();
   }
 }
 
@@ -532,20 +533,32 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  if(nvideo==0 && gochangevideo && fingerMovie2->isFrameNew()){
+  if(nvideo==0 && gochangevideo==1 && fingerMovie2->isLoaded()){
+    log("start play video 2", USR);
+    fingerMovie2->play();
+    gochangevideo=2;
+  }
+  if(nvideo==1 && gochangevideo==1 && fingerMovie->isLoaded()){
+    log("start play video 1", USR);
+    fingerMovie->play();
+    gochangevideo=2;
+  }
+  
+  if(nvideo==0 && gochangevideo==2 && fingerMovie2->isFrameNew()){
     log("switch from video 1 to 2", USR);
     clearVideo(nvideo);
-    gochangevideo=false;
+    gochangevideo=0;
     nvideo=1;
     log("video1 is stop", USR);
   }
-  if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
+  if(nvideo==1 && gochangevideo==2 && fingerMovie->isFrameNew()){
     log("switch from video 2 to 1", USR);
     clearVideo(nvideo);
-    gochangevideo=false;
+    gochangevideo=0;
     nvideo=0;
     log("video2 is stop", USR);
   }
+
   
   if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);
   if(nvideo==1) fingerMovie2->draw(posX,posY,width+128,height+72);
