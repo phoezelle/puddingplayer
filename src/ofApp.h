@@ -50,13 +50,13 @@ public:
   
   int ledG_value;
   int ledG_state;
-  long ledG_time_on;
-  int ledG_time_period;
+  uint64_t ledG_time_on;
+  uint64_t ledG_time_period;
   
   int ledR_state;
   int ledR_value;
-  long ledR_time_on;
-  int ledR_time_period;
+  uint64_t ledR_time_on;
+  uint64_t ledR_time_period;
   //ofThreadChannel<int> myThreadChannel;
   void checkLed();
   void flash_ledG(int f);

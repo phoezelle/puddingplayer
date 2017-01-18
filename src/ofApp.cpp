@@ -427,6 +427,7 @@ void ofApp::checkREMOTE(){
 
 
 void ofApp::checkLed(){
+  
   if(ledR_state > 0 && ofGetElapsedTimeMillis() - ledR_time_on > ledR_time_period){
     //Serial.print("led");Serial.print(ledR_state,DEC);Serial.print("-");Serial.print(ledR_value,DEC);
     ledR_time_on = ofGetElapsedTimeMillis();
@@ -439,7 +440,7 @@ void ofApp::checkLed(){
     digitalWrite(LEDR, ledR_value);
   }
   
-  if(ledG_state > 0 && ofGetElapsedTimeMillis() - ledG_time_on > ledG_time_period){
+  if(ledG_state > 0 && ofGetElapsedTimeMillis()- ledG_time_on > ledG_time_period){
     //Serial.print("led");Serial.print(ledR_state,DEC);Serial.print("-");Serial.print(ledR_value,DEC);
     ledG_time_on = ofGetElapsedTimeMillis();
     ledG_state--;
@@ -456,11 +457,11 @@ void ofApp::flash_ledG(int f){
   log("flash G "+ofToString(f),USR);
   ledG_state=2*f;
 }
+
 void ofApp::flash_ledR(int f){
   log("flash R "+ofToString(f),USR);
   ledR_state=2*f;
 }
-
 
   
 //--------------------------------------------------------------
