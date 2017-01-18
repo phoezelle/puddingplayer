@@ -51,8 +51,10 @@ void ofApp::usbstickMount(){
     ofSystem("sudo mount -o rw /dev/sda1 "+rootDirectory);
     if(myDir.listDir(rootDirectory)>1) {
       log("mount usb stick", USR);
+      flash_ledG(1);
     }else {
       log("problem for mounting usb stick", WARNING);
+      flash_ledR(1);
     }
   }
   rootDirectory+="/";
@@ -62,6 +64,16 @@ void ofApp::usbstickMount(){
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+  
+  ledG_value = 0;
+  ledG_state = 0;
+  ledG_time_on = ofGetElapsedTimeMillis();
+  ledG_time_period = 50;
+  
+  ledR_state = 0;
+  ledR_value = 0;
+  ledR_time_on = ofGetElapsedTimeMillis();
+  ledR_time_period = 200;
   
   firstlaunch=true;
   loglevel=USR;
@@ -128,6 +140,7 @@ void ofApp::getPref(){
     }
 	}else{
     log(rootDirectory+"config.txt file not found",WARNING);
+    flash_ledR(2);
   }
   
   ofSetWindowShape(width, height);
@@ -279,6 +292,7 @@ void ofApp::playNext(){
 }
 
 void ofApp::play(){
+  flash_ledG(1);
   if(fingerMovie.isPlaying())fingerMovie.stop();
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
 log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
@@ -293,6 +307,7 @@ void ofApp::pausePlay(){
 }
 
 void ofApp::playBackground(){
+  flash_ledG(1);
   if(fingerMovie.isPlaying())fingerMovie.stop();
   string videoPath = rootDirectory+mediaDirectory+"/"+backgroundDirectory+"/"+ backgroundList[currentBackground];
   log("play backgroung video "+videoPath, USR);
@@ -383,6 +398,7 @@ void ofApp::checkREMOTE(){
   if (myorder > 0){
     thread.order=0;
     log("get order"+ofToString(myorder),USR);
+    flash_ledR(1);
     switch (myorder) {
       case 1:
         playNext();
@@ -409,6 +425,40 @@ void ofApp::checkREMOTE(){
 }
 
 
+void ofApp::checkLed(){
+  if(ledR_state > 0 && millis() - ledR_time_on > ledR_time_period){
+    //Serial.print("led");Serial.print(ledR_state,DEC);Serial.print("-");Serial.print(ledR_value,DEC);
+    ledR_time_on = ofGetElapsedTimeMillis();
+    ledR_state--;
+    if(ledR_value == 1) ledR_value=0; else ledR_value=1;
+    digitalWrite(LEDR, ledR_value);
+  }
+  if(ledR_state==0){
+    ledR_value=0;
+    digitalWrite(LEDR, ledR_value);
+  }
+  
+  if(ledG_state > 0 && millis() - ledG_time_on > ledG_time_period){
+    //Serial.print("led");Serial.print(ledR_state,DEC);Serial.print("-");Serial.print(ledR_value,DEC);
+    ledG_time_on = ofGetElapsedTimeMillis();
+    ledG_state--;
+    if(ledG_value == 1) ledG_value=0; else ledG_value=1;
+    digitalWrite(LEDR, ledG_value);
+  }
+  if(ledG_state==0){
+    ledG_value=0;
+    digitalWrite(LEDR, ledG_value);
+  }
+}
+
+void ofApp::flash_ledG(int f){
+  log("flash G "+ofToString(f),USR);
+  ledG_state=2*f;
+}
+void ofApp::flash_ledR(int f){
+  log("flash G "+ofToString(f),USR);
+  ledR_state=2*f;
+}
 
 
   
@@ -417,6 +467,7 @@ void ofApp::update(){
   fingerMovie.update();
   if(pi)checkGPIO();
   if(pi)checkREMOTE();
+  if(pi)checkLed();
 }
 
 //--------------------------------------------------------------
