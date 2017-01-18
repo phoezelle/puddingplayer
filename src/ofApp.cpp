@@ -347,7 +347,7 @@ void ofApp::clearVideo(int n){
       delay(10);
     }
     //log("close previous video1",USR);
-    fingerMovie->close();
+    //fingerMovie->close();
   }
   if (n==1 && fingerMovie2!=nullptr) {
     if(fingerMovie2->isPlaying()){
@@ -356,7 +356,7 @@ void ofApp::clearVideo(int n){
       delay(10);
     }
     //log("close previous video2",USR);
-    fingerMovie2->close();
+    //fingerMovie2->close();
   }
 }
 
