@@ -323,9 +323,12 @@ void ofApp::pausePlay(){
 
 void ofApp::playBackground(){
   flash_ledG(1);
-  if(fingerMovie->isPlaying())fingerMovie->stop();
+  if(fingerMovie->isPlaying()){
+    log("stop previous video",USR);
+    fingerMovie->stop();
+    delay(1);
+  }
   fingerMovie->close();
-  fingerMovie->closeMovie();
   delete fingerMovie;
   fingerMovie = new ofVideoPlayer();
   fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
@@ -497,7 +500,7 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  if(fingerMovie->isFrameNew() && !fingerMovie->isPaused()) fingerMovie->draw(posX,posY,width+128,height+72);
+  fingerMovie->draw(posX,posY,width+128,height+72);
   ofSetHexColor(0xff3300);
   
   if(ofGetElapsedTimeMillis()<60000){
