@@ -47,6 +47,7 @@ void ofApp::usbstickMount(){
   }
   if (myDir.listDir(rootDirectory)>1) {
     log("USB stick already mount", USR);
+    flash_ledG(1);
   } else {
     ofSystem("sudo mount -o rw /dev/sda1 "+rootDirectory);
     if(myDir.listDir(rootDirectory)>1) {
@@ -456,7 +457,7 @@ void ofApp::flash_ledG(int f){
   ledG_state=2*f;
 }
 void ofApp::flash_ledR(int f){
-  log("flash G "+ofToString(f),USR);
+  log("flash R "+ofToString(f),USR);
   ledR_state=2*f;
 }
 
