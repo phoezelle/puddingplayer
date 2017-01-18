@@ -299,11 +299,11 @@ void ofApp::play(){
   flash_ledG(1);
   if(fingerMovie->isPlaying()){
     log("stop previous video",USR);
-    //fingerMovie->stop();
+    fingerMovie->stop();
+    delay(1);
   }
   log("close previous video",USR);
   fingerMovie->close();
-  fingerMovie->closeMovie();
   log("delete it",USR);
   delete fingerMovie;
   log("create new one",USR);
