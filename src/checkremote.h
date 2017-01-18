@@ -32,7 +32,8 @@ class Checkremote : public ofThread {
       if(input.length()>3){
         std::cout << "cin = " << input << std::endl;
         if(input.compare(0, 6, "OKDATA")==0){
-        std::cout << "receive order : " << input.substr(7,1) << std::endl;
+        
+          std::cout << "receive order : " << input.substr(7,1) << std::endl;
           //myThreadChannel.send(std::move(ofToInt(input.substr(7,1))));
           lock();
           order = ofToInt(input.substr(7,1));

@@ -297,10 +297,16 @@ void ofApp::playNext(){
 
 void ofApp::play(){
   flash_ledG(1);
-  if(fingerMovie->isPlaying())fingerMovie->stop();
+  if(fingerMovie->isPlaying()){
+    log("stop previous video",USR);
+    fingerMovie->stop();
+  }
+  log("close previous video",USR);
   fingerMovie->close();
   fingerMovie->closeMovie();
+  log("delete it",USR);
   delete fingerMovie;
+  log("create new one",USR);
   fingerMovie = new ofVideoPlayer();
   fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
@@ -487,7 +493,6 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-  
   //checkinputandplayVideo();
   
 	ofSetHexColor(0xFFFFFF);
@@ -590,7 +595,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::exit() {
-  
   // stop the thread
   thread.stopThread();
 }

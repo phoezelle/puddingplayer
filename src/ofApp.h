@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "checkremote.h"
+#include "video.h"
 
 class ofApp : public ofBaseApp{
   
