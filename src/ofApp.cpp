@@ -76,8 +76,9 @@ void ofApp::setup(){
   ledR_time_on = ofGetElapsedTimeMillis();
   ledR_time_period = 200;
   
-  int nvideo=0;
+  nvideo=0;
   gochangevideo=false;
+  isplayground=true;
   
   
   firstlaunch=true;
@@ -282,6 +283,7 @@ void ofApp::playNext(){
   if (currentVideo==-1){
     log("first time play",DEBUG);
     currentVideo=0;
+    isplayground=false;
     play();
     return;
   }
@@ -297,18 +299,27 @@ void ofApp::playNext(){
       currentVideo++;
     }
   }
+  isplayground=false;
   play();
 }
 
 void ofApp::play(){
   gochangevideo=true;
   flash_ledG(1);
+  string videoPath="";
+  if(isplayground){
+    videoPath = rootDirectory+mediaDirectory+"/"+backgroundDirectory+"/"+ backgroundList[currentBackground];
+    log("play backgroung video "+videoPath, USR);
+  } else {
+    videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
+    log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
+  }
+  
+  
   if(nvideo==0){
     log("create video2",USR);
     fingerMovie2 = new ofVideoPlayer();
     fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
-    string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
-    log("play video2 ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
     fingerMovie2->load(videoPath);
     fingerMovie2->setLoopState(OF_LOOP_NONE);
     fingerMovie2->play();
@@ -318,8 +329,6 @@ void ofApp::play(){
     log("create video1",USR);
     fingerMovie = new ofVideoPlayer();
     fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
-    string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
-    log("play video1 ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
     fingerMovie->load(videoPath);
     fingerMovie->setLoopState(OF_LOOP_NONE);
     fingerMovie->play();
@@ -357,22 +366,8 @@ void ofApp::pausePlay(){
 }
 
 void ofApp::playBackground(){
-  gochangevideo=true;
-  flash_ledG(1);
-  if(fingerMovie->isPlaying()){
-    log("stop previous video",USR);
-    fingerMovie->stop();
-    delay(1);
-  }
-  fingerMovie->close();
-  delete fingerMovie;
-  fingerMovie = new ofVideoPlayer();
-  fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
-  string videoPath = rootDirectory+mediaDirectory+"/"+backgroundDirectory+"/"+ backgroundList[currentBackground];
-  log("play backgroung video "+videoPath, USR);
-  fingerMovie->load(videoPath);
-  fingerMovie->setLoopState(OF_LOOP_NONE);
-  fingerMovie->play();
+  isplayground=true;
+  play();
 }
 
 void ofApp::changeBackground(){
@@ -540,12 +535,12 @@ void ofApp::draw(){
   if(nvideo==0 && gochangevideo && fingerMovie2->isFrameNew()){
     clearVideo(nvideo);
     gochangevideo=false;
-    nvideo==1;
+    nvideo=1;
   }
   if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
     clearVideo(nvideo);
     gochangevideo=false;
-    nvideo==0;
+    nvideo=0;
   }
   
   if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);

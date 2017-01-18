@@ -84,6 +84,7 @@ public:
   ofVideoPlayer     *fingerMovie2;
   int nvideo;
   bool gochangevideo;
+  bool isplayground;
   void play();
   void playNext();
   void pausePlay();
