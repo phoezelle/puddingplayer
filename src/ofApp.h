@@ -79,7 +79,7 @@ public:
 
   
   //VIDEOPLAYER
-  ofVideoPlayer 		fingerMovie;
+  ofVideoPlayer 		*fingerMovie;
   void play();
   void playNext();
   void pausePlay();

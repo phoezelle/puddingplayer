@@ -26,7 +26,7 @@ void ofApp::definePlateform(){
   ofTargetPlatform myRun = ofGetTargetPlatform();
   if (myRun==OF_TARGET_LINUXARMV7L || myRun==OF_TARGET_LINUXARMV6L){
     pi=true;
-    fingerMovie.setPixelFormat(OF_PIXELS_NATIVE);
+    fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
     rootDirectory="/tmp/stick";
     log("RASPI DETECT path from usb stick", USR);
     
@@ -88,6 +88,8 @@ void ofApp::setup(){
   ofHideCursor();
   ofBackground(0,0,0);
 	ofSetVerticalSync(true);
+  
+  fingerMovie = new ofVideoPlayer();
   
   definePlateform();
   if (pi) {
@@ -294,27 +296,37 @@ void ofApp::playNext(){
 
 void ofApp::play(){
   flash_ledG(1);
-  if(fingerMovie.isPlaying())fingerMovie.stop();
+  if(fingerMovie->isPlaying())fingerMovie->stop();
+  fingerMovie->close();
+  fingerMovie->closeMovie();
+  delete fingerMovie;
+  fingerMovie = new ofVideoPlayer();
+  fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
 string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
 log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
-fingerMovie.load(videoPath);
-fingerMovie.setLoopState(OF_LOOP_NONE);
-fingerMovie.play();
+fingerMovie->load(videoPath);
+fingerMovie->setLoopState(OF_LOOP_NONE);
+fingerMovie->play();
 }
 
 void ofApp::pausePlay(){
   log("play/pause video ", USR);
-  fingerMovie.setPaused(!fingerMovie.isPaused());
+  fingerMovie->setPaused(!fingerMovie->isPaused());
 }
 
 void ofApp::playBackground(){
   flash_ledG(1);
-  if(fingerMovie.isPlaying())fingerMovie.stop();
+  if(fingerMovie->isPlaying())fingerMovie->stop();
+  fingerMovie->close();
+  fingerMovie->closeMovie();
+  delete fingerMovie;
+  fingerMovie = new ofVideoPlayer();
+  fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
   string videoPath = rootDirectory+mediaDirectory+"/"+backgroundDirectory+"/"+ backgroundList[currentBackground];
   log("play backgroung video "+videoPath, USR);
-  fingerMovie.load(videoPath);
-  fingerMovie.setLoopState(OF_LOOP_NONE);
-  fingerMovie.play();
+  fingerMovie->load(videoPath);
+  fingerMovie->setLoopState(OF_LOOP_NONE);
+  fingerMovie->play();
 }
 
 void ofApp::changeBackground(){
@@ -466,7 +478,7 @@ void ofApp::flash_ledR(int f){
   
 //--------------------------------------------------------------
 void ofApp::update(){
-  fingerMovie.update();
+  fingerMovie->update();
   if(pi)checkGPIO();
   if(pi)checkREMOTE();
   if(pi)checkLed();
@@ -479,14 +491,14 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  fingerMovie.draw(posX,posY,width+128,height+72);
+  fingerMovie->draw(posX,posY,width+128,height+72);
   ofSetHexColor(0xff3300);
   
   if(ofGetElapsedTimeMillis()<60000){
     ofDrawBitmapString(firstMessage,100,420);
   }
   
-  if(fingerMovie.getIsMovieDone()){
+  if(fingerMovie->getIsMovieDone()){
     log("end video",DEBUG);
     playBackground();
   }
