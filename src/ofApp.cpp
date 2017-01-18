@@ -94,6 +94,8 @@ void ofApp::setup(){
   ofBackground(0,0,0);
 	ofSetVerticalSync(true);
   
+  fingerMovie = new ofVideoPlayer();
+  fingerMovie2 = new ofVideoPlayer();
   
   definePlateform();
   if (pi) {
@@ -315,6 +317,8 @@ void ofApp::play(){
   
   
   if(nvideo==0){
+    log("delete video2",USR);
+    delete fingerMovie;
     log("create video2",USR);
     fingerMovie2 = new ofVideoPlayer();
     fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
@@ -324,6 +328,8 @@ void ofApp::play(){
   }
   
   if(nvideo==1){
+    log("delete video1",USR);
+    delete fingerMovie;
     log("create video1",USR);
     fingerMovie = new ofVideoPlayer();
     fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
@@ -342,8 +348,6 @@ void ofApp::clearVideo(int n){
     }
     log("close previous video1",USR);
     fingerMovie->close();
-    log("delete it1",USR);
-    delete fingerMovie;
   }
   if (n==1 && fingerMovie2!=nullptr) {
     if(fingerMovie2->isPlaying()){
@@ -353,8 +357,6 @@ void ofApp::clearVideo(int n){
     }
     log("close previous video2",USR);
     fingerMovie2->close();
-    log("delete it2",USR);
-    delete fingerMovie2;
   }
 }
 
