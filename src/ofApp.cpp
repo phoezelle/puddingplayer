@@ -317,20 +317,20 @@ void ofApp::play(){
   }
   
   if(nvideo==0){
-    log("delete video2",USR);
-    delete fingerMovie;
+    //log("delete video2",USR);
+    //delete fingerMovie;
     log("create video2",USR);
-    fingerMovie2 = new ofVideoPlayer();
+    //fingerMovie2 = new ofVideoPlayer();
     fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
     fingerMovie2->load(videoPath);
     fingerMovie2->setLoopState(OF_LOOP_NONE);
     fingerMovie2->play();
   }
   if(nvideo==1){
-    log("delete video1",USR);
-    delete fingerMovie;
+    //log("delete video1",USR);
+    //delete fingerMovie;
     log("create video1",USR);
-    fingerMovie = new ofVideoPlayer();
+    //fingerMovie = new ofVideoPlayer();
     fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
     fingerMovie->load(videoPath);
     fingerMovie->setLoopState(OF_LOOP_NONE);
@@ -342,20 +342,20 @@ void ofApp::clearVideo(int n){
   if (n==0 && fingerMovie!=nullptr) {
     if(fingerMovie->isPlaying()){
       log("stop previous video1",USR);
-      //fingerMovie->stop();
+      fingerMovie->stop();
       delay(10);
     }
-    log("close previous video1",USR);
-    fingerMovie->close();
+    //log("close previous video1",USR);
+    //fingerMovie->close();
   }
   if (n==1 && fingerMovie2!=nullptr) {
     if(fingerMovie2->isPlaying()){
       log("stop previous video2",USR);
-      //fingerMovie2->stop();
+      fingerMovie2->stop();
       delay(10);
     }
-    log("close previous video2",USR);
-    fingerMovie2->close();
+    //log("close previous video2",USR);
+    //fingerMovie2->close();
   }
 }
 
@@ -537,14 +537,14 @@ void ofApp::draw(){
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=1;
-    log("video1 is delete", USR);
+    log("video1 is stop", USR);
   }
   if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
     log("switch from video 2 to 1", USR);
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=0;
-    log("video2 is delete", USR);
+    log("video2 is stop", USR);
   }
   
   if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);
