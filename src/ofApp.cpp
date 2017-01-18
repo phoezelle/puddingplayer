@@ -94,8 +94,6 @@ void ofApp::setup(){
   ofBackground(0,0,0);
 	ofSetVerticalSync(true);
   
-  fingerMovie = new ofVideoPlayer();
-  fingerMovie2 = new ofVideoPlayer();
   
   definePlateform();
   if (pi) {
@@ -336,7 +334,7 @@ void ofApp::play(){
 }
 
 void ofApp::clearVideo(int n){
-  if (n==0) {
+  if (n==0 && fingerMovie!=nullptr) {
     if(fingerMovie->isPlaying()){
       log("stop previous video1",USR);
       //fingerMovie->stop();
@@ -347,7 +345,7 @@ void ofApp::clearVideo(int n){
     log("delete it1",USR);
     delete fingerMovie;
   }
-  if (n==1) {
+  if (n==1 && fingerMovie2!=nullptr) {
     if(fingerMovie2->isPlaying()){
       log("stop previous video2",USR);
       //fingerMovie2->stop();
@@ -533,11 +531,13 @@ void ofApp::draw(){
 	ofSetHexColor(0xFFFFFF);
   
   if(nvideo==0 && gochangevideo && fingerMovie2->isFrameNew()){
+    log("switch from video 1 to 2", USR);
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=1;
   }
   if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
+    log("switch from video 2 to 1", USR);
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=0;
