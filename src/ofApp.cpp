@@ -93,8 +93,9 @@ void ofApp::setup(){
   
   definePlateform();
   if (pi) {
-    initGPIO();
     usbstickMount();
+    initGPIO();
+    
     
   }
   ofBackground(0,0,0);
