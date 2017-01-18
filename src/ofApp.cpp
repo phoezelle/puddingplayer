@@ -467,11 +467,11 @@ void ofApp::checkLed(){
     ledG_time_on = ofGetElapsedTimeMillis();
     ledG_state--;
     if(ledG_value == 1) ledG_value=0; else ledG_value=1;
-    digitalWrite(LEDR, ledG_value);
+    digitalWrite(LEDG, ledG_value);
   }
   if(ledG_state==0){
     ledG_value=0;
-    digitalWrite(LEDR, ledG_value);
+    digitalWrite(LEDG, ledG_value);
   }
 }
 
