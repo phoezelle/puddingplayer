@@ -535,12 +535,14 @@ void ofApp::draw(){
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=1;
+    log("video1 is delete", USR);
   }
   if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
     log("switch from video 2 to 1", USR);
     clearVideo(nvideo);
     gochangevideo=false;
     nvideo=0;
+    log("video2 is delete", USR);
   }
   
   if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);
