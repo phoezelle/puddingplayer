@@ -81,6 +81,9 @@ public:
   
   //VIDEOPLAYER
   ofVideoPlayer 		*fingerMovie;
+  ofVideoPlayer     *fingerMovie2;
+  int nvideo;
+  bool gochangevideo;
   void play();
   void playNext();
   void pausePlay();
@@ -88,6 +91,7 @@ public:
   void changeBackground();
   void nextScene();
   void restartScene();
+  void clearVideo(int n);
   
   int maxScene, currentScene, currentVideo, currentBackground, currentCharacter,nbMedia;
   string rootDirectory,mediaDirectory,backgroundDirectory;

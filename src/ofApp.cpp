@@ -76,6 +76,10 @@ void ofApp::setup(){
   ledR_time_on = ofGetElapsedTimeMillis();
   ledR_time_period = 200;
   
+  int nvideo=0;
+  gochangevideo=false;
+  
+  
   firstlaunch=true;
   loglevel=USR;
   pi=true;
@@ -90,6 +94,7 @@ void ofApp::setup(){
 	ofSetVerticalSync(true);
   
   fingerMovie = new ofVideoPlayer();
+  fingerMovie2 = new ofVideoPlayer();
   
   definePlateform();
   if (pi) {
@@ -109,7 +114,7 @@ void ofApp::setup(){
   
 	// Uncomment this to show movies with alpha channels
 	// fingerMovie.setPixelFormat(OF_PIXELS_RGBA);
-
+  
 }
 
 
@@ -152,9 +157,9 @@ void ofApp::getPref(){
 
 
 void ofApp::setcurrentCharacter(int _character){
-    currentCharacter = _character;
-    log("set character n" + ofToString(currentCharacter) + " -> directory " + characterList[currentCharacter], USR);
-    buildMediaList();
+  currentCharacter = _character;
+  log("set character n" + ofToString(currentCharacter) + " -> directory " + characterList[currentCharacter], USR);
+  buildMediaList();
 }
 
 
@@ -284,36 +289,66 @@ void ofApp::playNext(){
     log("return to first scene",DEBUG);
     currentScene=0;currentVideo=0;
   }else{
-  if(mediaList[currentScene][currentVideo] == mediaList[currentScene].back()) {
-    log("go next scene",DEBUG);
+    if(mediaList[currentScene][currentVideo] == mediaList[currentScene].back()) {
+      log("go next scene",DEBUG);
       currentScene++;currentVideo=0;
-  }else{
-    log("go next video",DEBUG);
-    currentVideo++;
-  }
+    }else{
+      log("go next video",DEBUG);
+      currentVideo++;
+    }
   }
   play();
 }
 
 void ofApp::play(){
+  gochangevideo=true;
   flash_ledG(1);
-  if(fingerMovie->isPlaying()){
-    log("stop previous video",USR);
-    fingerMovie->stop();
-    delay(1);
+  if(nvideo==0){
+    log("create video2",USR);
+    fingerMovie2 = new ofVideoPlayer();
+    fingerMovie2->setPixelFormat(OF_PIXELS_NATIVE);
+    string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
+    log("play video2 ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
+    fingerMovie2->load(videoPath);
+    fingerMovie2->setLoopState(OF_LOOP_NONE);
+    fingerMovie2->play();
   }
-  log("close previous video",USR);
-  fingerMovie->close();
-  log("delete it",USR);
-  delete fingerMovie;
-  log("create new one",USR);
-  fingerMovie = new ofVideoPlayer();
-  fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
-string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
-log("play video ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
-fingerMovie->load(videoPath);
-fingerMovie->setLoopState(OF_LOOP_NONE);
-fingerMovie->play();
+  
+  if(nvideo==1){
+    log("create video1",USR);
+    fingerMovie = new ofVideoPlayer();
+    fingerMovie->setPixelFormat(OF_PIXELS_NATIVE);
+    string videoPath = rootDirectory+mediaDirectory+"/"+ mediaList[currentScene][currentVideo];
+    log("play video1 ("+ofToString(currentScene)+"/"+ofToString(currentVideo)+") "+videoPath, USR,true);
+    fingerMovie->load(videoPath);
+    fingerMovie->setLoopState(OF_LOOP_NONE);
+    fingerMovie->play();
+  }
+}
+
+void ofApp::clearVideo(int n){
+  if (n==0) {
+    if(fingerMovie->isPlaying()){
+      log("stop previous video1",USR);
+      //fingerMovie->stop();
+      delay(10);
+    }
+    log("close previous video1",USR);
+    fingerMovie->close();
+    log("delete it1",USR);
+    delete fingerMovie;
+  }
+  if (n==1) {
+    if(fingerMovie2->isPlaying()){
+      log("stop previous video2",USR);
+      //fingerMovie2->stop();
+      delay(10);
+    }
+    log("close previous video2",USR);
+    fingerMovie2->close();
+    log("delete it2",USR);
+    delete fingerMovie2;
+  }
 }
 
 void ofApp::pausePlay(){
@@ -322,6 +357,7 @@ void ofApp::pausePlay(){
 }
 
 void ofApp::playBackground(){
+  gochangevideo=true;
   flash_ledG(1);
   if(fingerMovie->isPlaying()){
     log("stop previous video",USR);
@@ -361,8 +397,8 @@ void ofApp::nextScene(){
 
 void ofApp::restartScene(){
   log("restart scene ", USR);
-    currentVideo=0;
-    play();
+  currentVideo=0;
+  play();
   
 }
 
@@ -373,21 +409,21 @@ void ofApp::checkGPIO(){
     if(gpio_state!=laststate[i]){
       laststate[i]=gpio_state;
       if (gpio_state==0) {
-      if(!longpush[i]){
-        log("short push release wiring pi "+ofToString(pin[i]), DEBUG);
-
-      if(i==0){
-        playNext();
-      }
-      if(i==1){
-        pausePlay();
-      }
-      if(i==2){
-        nextScene();
-      }
+        if(!longpush[i]){
+          log("short push release wiring pi "+ofToString(pin[i]), DEBUG);
+          
+          if(i==0){
+            playNext();
+          }
+          if(i==1){
+            pausePlay();
+          }
+          if(i==2){
+            nextScene();
+          }
         }else{
           log("long push release wiring pi "+ofToString(pin[i]), DEBUG);
-
+          
           if(i==1){
             changeBackground();
           }
@@ -485,10 +521,11 @@ void ofApp::flash_ledR(int f){
   ledR_state=2*f;
 }
 
-  
+
 //--------------------------------------------------------------
 void ofApp::update(){
-  fingerMovie->update();
+  if(fingerMovie!=nullptr)fingerMovie->update();
+  if(fingerMovie2!=nullptr)fingerMovie2->update();
   if(pi)checkGPIO();
   if(pi)checkREMOTE();
   if(pi)checkLed();
@@ -500,7 +537,19 @@ void ofApp::draw(){
   
 	ofSetHexColor(0xFFFFFF);
   
-  fingerMovie->draw(posX,posY,width+128,height+72);
+  if(nvideo==0 && gochangevideo && fingerMovie2->isFrameNew()){
+    clearVideo(nvideo);
+    gochangevideo=false;
+    nvideo==1;
+  }
+  if(nvideo==1 && gochangevideo && fingerMovie->isFrameNew()){
+    clearVideo(nvideo);
+    gochangevideo=false;
+    nvideo==0;
+  }
+  
+  if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);
+  if(nvideo==1) fingerMovie2->draw(posX,posY,width+128,height+72);
   ofSetHexColor(0xff3300);
   
   if(ofGetElapsedTimeMillis()<60000){
@@ -540,7 +589,7 @@ void ofApp::keyPressed  (int key){
     case 'r':
       restartScene();
       break;
-    
+      
       
   }
   
@@ -604,31 +653,31 @@ void ofApp::exit() {
 
 
 /*
-void ofApp::checkinputandplayVideo(){
-  if(firstlaunch){
-  lastpath="inconnu";
-  if (!fingerMovie.isPlaying()){
-    playVideoInPath();
-  }
-    firstlaunch=false;
-  }
-}
-
-void ofApp::playVideoInPath() {
-  ofDirectory myDir;
-  if(myDir.doesDirectoryExist(rootDirectory+"movies/"+ lastpath)){
-    int maxVideo = myDir.listDir(rootDirectory+"movies/" + lastpath);
-    cout << ofToString(maxVideo) << " files in path : " << rootDirectory << "movies/" << lastpath <<  endl;
-    int selected = (int) ofRandom(maxVideo);
-    cout << "\x1b[32mtry read video "<< selected << " : " << myDir.getPath(selected) << "\x1b[0m" << endl;
-    
-    fingerMovie.load(myDir.getPath(selected));
-    fingerMovie.setLoopState(OF_LOOP_NONE);
-    // cout << "video size" << fingerMovie.getHeight() << "/" << fingerMovie.getWidth() << endl;
-    fingerMovie.play();
-    
-  }
-}
+ void ofApp::checkinputandplayVideo(){
+ if(firstlaunch){
+ lastpath="inconnu";
+ if (!fingerMovie.isPlaying()){
+ playVideoInPath();
+ }
+ firstlaunch=false;
+ }
+ }
+ 
+ void ofApp::playVideoInPath() {
+ ofDirectory myDir;
+ if(myDir.doesDirectoryExist(rootDirectory+"movies/"+ lastpath)){
+ int maxVideo = myDir.listDir(rootDirectory+"movies/" + lastpath);
+ cout << ofToString(maxVideo) << " files in path : " << rootDirectory << "movies/" << lastpath <<  endl;
+ int selected = (int) ofRandom(maxVideo);
+ cout << "\x1b[32mtry read video "<< selected << " : " << myDir.getPath(selected) << "\x1b[0m" << endl;
+ 
+ fingerMovie.load(myDir.getPath(selected));
+ fingerMovie.setLoopState(OF_LOOP_NONE);
+ // cout << "video size" << fingerMovie.getHeight() << "/" << fingerMovie.getWidth() << endl;
+ fingerMovie.play();
+ 
+ }
+ }
  */
 
 
