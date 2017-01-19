@@ -459,6 +459,7 @@ void ofApp::checkREMOTE(){
         playNext();
         break;
       case 2:
+        playNext();
         break;
       case 3:
         pausePlay();
