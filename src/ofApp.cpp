@@ -571,8 +571,8 @@ void ofApp::draw(){
   }
 
   
-  if(nvideo==0) fingerMovie->draw(posX,posY,width+128,height+72);
-  if(nvideo==1) fingerMovie2->draw(posX,posY,width+128,height+72);
+  if(nvideo==0) fingerMovie->draw(posX,posY,width,height);
+  if(nvideo==1) fingerMovie2->draw(posX,posY,width,height);
   ofSetHexColor(0xff3300);
   
   if(ofGetElapsedTimeMillis()<60000){
