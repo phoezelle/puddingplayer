@@ -472,7 +472,7 @@ void ofApp::checkREMOTE(){
       case 6:
         restartScene();
         break;
-      case 18:
+      case 8:
         system ("sudo reboot");
         break;
       default:
