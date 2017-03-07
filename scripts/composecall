@@ -1,0 +1,2 @@
+ #! /bin/sh
+/home/pi/openFrameworks/apps/myApps/testRF24/sender | /home/pi/openFrameworks/apps/myApps/puddingplayer/bin/puddingplayer

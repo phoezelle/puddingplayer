@@ -42,6 +42,9 @@ test it in screen attach mode
 create init script
   nano /etc/init.d/puddingplayer
   chmod +x /etc/init.d/puddingplayer
+create call script
+  nano /etc/init.d/composecall
+  chmod +x /etc/init.d/composecall
 add call to the script in rc.local
   nano /etc/rc.local
 hdmi auto hot plug

@@ -1,0 +1,35 @@
+ #! /bin/sh
+# /etc/init.d/puddingplayer
+
+### BEGIN INIT INFO
+# Provides:          puddingplayer
+# Required-Start:    $local_fs $remote_fs $network $ssh
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Simple script to start player puddingplayer
+# Description:
+### END INIT INFO
+
+# If you want a command to always run, put it here
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting puddingplayer in 10s"
+    sleep 10
+    # run application you want to start
+    sudo screen -S pudding -d -m /etc/init.d/composecall
+    ;;
+  stop)
+    echo "Stopping puddingplayer"
+    # kill application you want to stop
+    killall puddingplayer
+    ;;
+  *)
+    echo "Usage: /etc/init.d/puddingplayer {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

@@ -1,0 +1,6 @@
+city = paris,fr
+positionX = 50
+positionY = 20
+largeur = 120
+hauteur = 250
+rootpathforvideo = movies/
